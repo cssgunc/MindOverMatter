@@ -1,0 +1,49 @@
+body {
+  background-color: white;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+.left {
+  flex: 50%;
+  height: 100%;
+
+}
+
+.right {
+  flex: 50%;
+  height: 100%;
+  border-left: 1px solid lightblue;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.flexbox {
+  display: flex;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: grey;
+}
+
+.nav a:hover {
+  background-color: black;
+}
