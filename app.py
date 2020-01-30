@@ -11,3 +11,9 @@ def hello(name=None):
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
+
+@app.route('/help')
+def get_help():
+    return render_template('help.html')
+
+
