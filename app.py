@@ -19,3 +19,7 @@ def get_help():
 @app.route('/calendar')
 def calendar():
     return render_template('calendar.html')
+
+@app.route('/resources')
+def resources():
+    return render_template('resources.html')
