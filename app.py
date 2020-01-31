@@ -16,4 +16,6 @@ def hello_world():
 def get_help():
     return render_template('help.html')
 
-
+@app.route('/calendar')
+def calendar():
+    return render_template('calendar.html')
