@@ -14,6 +14,6 @@ def hello_world():
 
 @app.route('/help')
 def get_help():
-    return render_template('help.html')
+    return render_template('GitHelpNow.html')
 
 
