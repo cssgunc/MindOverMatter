@@ -15,6 +15,7 @@
         overflow-x:hidden;
     }
     .center {
+        float: left;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -84,6 +85,7 @@
 }
 
 .call {
+    float: left;
     background-color: white;
     display: flex;
     align-items: center;
@@ -106,7 +108,7 @@
     border-right-width: 3px;
     border-left-width: 3px;
 }
-.chat {
+#chat {
     background-color: white;
     display: flex;
     align-items: center;
@@ -130,13 +132,14 @@
     border-right-width: 3px;
     border-left-width: 3px;
 }
-.website{
+#website{
     background-color: white;
     display: flex;
+    
     align-items: center;
     justify-content: center;
     width:225px;
-    height:200px;
+    height:300px;
     margin: -20 -50px;
     left: 77%;
     position: relative;
@@ -154,107 +157,29 @@
     border-right-width: 3px;
     border-left-width: 3px;
 }
-
-.call{
+    .dropdown {
     position: relative;
-}
-.call ul{
-    display:none;
-}
-
-.call:hover ul {
-    display: block;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
     position: absolute;
-    left: -2.9px;
-    width:225px;
-    height: 300px;
-    top: 167px;
-    right: .7px;
-    border-top-color:transparent;
-    border-radius: 3px;
-    border-bottom-color:none;
-    border-left-color: black;
-    border-right-color: black;
-    border-style: solid;
-    text-indent: -4px;
-    text-align: left;
+    background-color: #f9f9f9;
+    width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-block-end-width: 3px;
     border-block-start-width: 3px;
     border-right-width: 3px;
     border-left-width: 3px;
-    overflow: scroll;
   }
+  .dropdown-content a:hover {background-color: #f1f1f1}
 
-.website{
-    position: relative;
-}
-.website  ul {
-    display:none;
-}
+    .show {display:block;}
 
-.website:hover ul {
-    display: block;
-    position: absolute;
-    left: -2.9px;
-    width:225px;
-    height: 300px;
-    top: 167px;
-    right: .9px;
-    border-top-color:transparent;
-    border-radius: 3px;
-    border-bottom-color:none;
-    border-left-color: black;
-    border-right-color: black;
-    border-style: solid;
-    text-indent: -4px;
-    text-align: left;
-    border-block-end-width: 3px;
-    border-block-start-width: 3px;
-    border-right-width: 3px;
-    border-left-width: 3px;
-    overflow: scroll;
-} 
-.website ul li p{
-    text-indent: 3.8px;
-}
-.website ul li p {
-    text-indent: 3.8px;
-}
-.chat{
-    position: relative;
-}
-.chat  ul {
-    display:none;
-}
 
-.chat:hover ul {
-    display: block;
-    position: absolute;
-    left: -3px;
-    width:225px;
-    height: 300px;
-    top: 167px;
-    right: .9px;
-    border-top-color:transparent;
-    border-radius: 3px;
-    border-bottom-color:none;
-    border-left-color: black;
-    border-right-color: black;
-    border-style: solid;
-    text-indent: -4px;
-    text-align: left;
-    border-block-end-width: 3px;
-    border-block-start-width: 3px;
-    border-right-width: 3px;
-    border-left-width: 3px;
-    overflow: scroll;
-  } 
-  .chat ul li p{
-      text-indent: 3.8px;
-  }
-  .call ul li p {
-     text-indent: 3.8px;
-  }
+
   h3 {
       margin: -20px -5px;
       text-align: left;
@@ -281,6 +206,10 @@
     font-size: 25px;
 }
 
+.float{
+    float:center;
+}
+
 
 
 
@@ -288,3 +217,56 @@
 
           
 
+.dropbtn {
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 auto;
+    background-color: #64a3d9;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-bottom-color: black;
+    border-top-color: black;
+    border-left-color: black;
+    border-right-color: black;
+    border-radius: 20px;
+    border-block-end-width: 3px;
+    border-block-start-width: 3px;
+    border-right-width: 3px;
+    border-left-width: 3px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
