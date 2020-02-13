@@ -28,6 +28,8 @@
     left: 425px;
 }
 
+
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -46,13 +48,12 @@
 <p>Call 911 in an emergency</p>
 
 <div class="dropdown">
-  <img id="call" src="https://i.pinimg.com/originals/84/4e/8c/844e8cd4ab26c82286238471f0e5a901.png" 
-  alt="Call" height="200" width="200">
-  <div id="call_dropdown" class="dropdown-content call">
-    <a href="https://www.townofchapelhill.org/town-hall/departments-services/police/contact-us">Chapel Hill Police</a>
-    <a href="tel:919-966-3658">CAPS 24/7 Hotline</a>
-    <a href="https://suicidepreventionlifeline.org/">Suicide Hotline</a>
-    <a href="https://www.nami.org/">National Alliance on Mental Health Hotline</a>
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
   </div>
   <img id="chat" src="https://i.pinimg.com/originals/36/c6/aa/36c6aa1fe0a7f8c37275f1f09021e990.png" 
   alt="Chat" height="200" width="200">
@@ -72,7 +73,7 @@
 <script>
 document.getElementById("call").onclick = function() {callFunction()};
 document.getElementById("chat").onclick = function() {chatFunction()};
-document.getElementById("websites").onclick = function() {websitesFunction()};
+document.getElementById("website").onclick = function() {websitesFunction()};
 
 
 function callFunction() {
