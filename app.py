@@ -14,6 +14,16 @@ def hello_world():
 
 @app.route('/help')
 def get_help():
-    return render_template('help.html')
+    return render_template('GitHelpNow.html')
 
+@app.route('/calendar')
+def calendar():
+    return render_template('calendar.html')
 
+@app.route('/resources')
+def resources():
+    return render_template('resources.html')
+
+@app.route('/homepage')
+def homepage():
+    return render_template('homepage.html')
