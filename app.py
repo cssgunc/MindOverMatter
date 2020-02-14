@@ -3,6 +3,15 @@ app = Flask(__name__)
 
 from flask import render_template
 
+@app.route('/testtemplate')
+def testtemplate():
+    return render_template('testtemplate.html')
+
+@app.route('/testtemplate2')
+def testtemplate2():
+    return render_template('testtemplate2.html')
+
+
 @app.route('/hello/')
 @app.route('/hello/<name>')
 def hello(name=None):

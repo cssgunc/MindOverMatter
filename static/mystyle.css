@@ -55,7 +55,7 @@ h1{
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: lightblue;
+  background-color: #64a3d9;
   
 }
 
@@ -63,12 +63,15 @@ h1{
   text-decoration: none;
   padding-left: 100px;
   padding-right: 100px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: lightblue;
+  font-size: 20pt;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: white;
+        background-color: #64a3d9;
 }
 
 .nav a:hover {
-  background-color:white;
+  background-color:#49779E;
 
 }
