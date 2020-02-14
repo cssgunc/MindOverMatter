@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyle.css') }}" />   
 </head>
 <body>
-<header>
+<!-- <header>
     <div class = "logocenter">
         <img src="{{ url_for('static', filename='Logo_no_words.png') }}"   width="200" height="200" alt="Mind Over Matter"></img>
         <h1>Put your mind first</h1>
@@ -20,7 +20,12 @@
             <a href="contact.asp">Resources</a>
             <a href="about.asp">Events</a>
             <a href="about.asp">About</a>
-    </div>
+    </div> -->
+    
+    
+       
+    {% extends "base.html" %} {% block body %} 
+
     
     <div class = "flexbox">
     <div class = "left blue">
@@ -31,5 +36,6 @@
         <h2>Resources</h2>
     </div>
     </div>
+    {% endblock %}
 </body>
 </html>
