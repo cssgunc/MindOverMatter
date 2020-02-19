@@ -23,7 +23,7 @@ def hello_world():
 
 @app.route('/help')
 def get_help():
-    return render_template('GitHelpNow.html')
+    return render_template('GitHelpNow1.html')
 
 @app.route('/calendar')
 def calendar():

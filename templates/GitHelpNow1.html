@@ -1,39 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %} 
+{% block head %}
+<title>
+    Mind/Matter - GitHelpNow
+</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='GitHelpNow.css') }}">
+<script src="{{ url_for('static', filename='GitHelp.js') }}"></script>
+ {% endblock %}
+{% block body %} 
 
-<head>
-    <title>
-        Mind/Matter - GitHelpNow
-    </title>
-    <link rel="stylesheet" type="text/css" href='GitHelpNow.css'>
-    <script src="GitHelp.js"></script>
-</head>
-`
 
-<body>
-    <div class="layer_background">
-        <div class = "grid_header">
-            <div class = "header">
-        <img src="Logo.jpg" alt="MindOverMatter" class="left" height = "300" width = "350">
-            </div>
-            <div class = "header_text">
-                <br> 
-                PUT YOUR MIND FIRSTS
-            </div>
-        </h1>
-        </div>
-        <div class="navbar">
-            <a class="active" href="#">Home</a>
-            <a href="#">Resources list</a>
-            <a href="#">Calender</a>
-        </div>
-        <br><br><br>
-
+    
         <div class="grid">
             <div class="chat">
                 <div class="dropdown">
                     <div class="container">
-                        <img onclick="ChatFunction()" class="dropbtn" src="live-chat-icon.png" alt="chat" height="180"
+                        <img onclick="ChatFunction()" class="dropbtn" src="{{ url_for('static', filename='live-chat-icon.png') }}" alt="chat" height="180"
                             width="210">
                     </div>
                     <div id="ChatDropdown" class="dropdown-content">
@@ -51,7 +32,7 @@
             <div class="call">
                 <div class="dropdown">
                     <div class="container">
-                        <img onclick="CallFunction()" class="dropbtn" src="live-chat-icon.png" alt="chat" height="180"
+                        <img onclick="CallFunction()" class="dropbtn" src="{{ url_for('static', filename='live-chat-icon.png') }}" alt="chat" height="180"
                             width="210">
                     </div>
                     <div id="callDropdown" class="dropdown-content">
@@ -77,7 +58,7 @@
             <div class="website">
                 <div class="dropdown">
                     <div class="container">
-                        <img onclick="WebsiteFunction()" class="dropbtn" src="live-chat-icon.png" alt="chat"
+                        <img onclick="WebsiteFunction()" class="dropbtn" src="{{ url_for('static', filename='live-chat-icon.png') }}" alt="chat"
                             height="180" width="210">
                     </div>
                     <div id="WebsiteDropdown" class="dropdown-content">
@@ -95,17 +76,10 @@
 
                 </div>
             </div>
-            <br><br><br><br><br><br>
-            <br><br><br><br><br><br>
-            <br><br><br><br><br><br>
-            <br><br><br><br><br><br>
-            <br><br><br><br><br><br>
+           
 
         </div>
 
     </div>
 
-
-</body>
-
-</html>
+{% endblock %}
