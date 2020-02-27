@@ -33,6 +33,7 @@ def calendar():
 def resources():
     return render_template('resources.html')
 
-@app.route('/homepage/')
-def homepage():
-    return render_template('homepage.html')
+import homepage
+import test
+
+app.run(debug=True)
