@@ -35,5 +35,6 @@ def resources():
 
 import homepage
 import test
+import database
 
 app.run(debug=True)
