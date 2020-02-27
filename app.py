@@ -25,12 +25,10 @@ def hello_world():
 def calendar():
     return render_template('calendar.html')
 
-@app.route('/resources')
-def resources():
-    return render_template('resources.html')
-
 import homepage
 import test
 import help
+import database
+import resources
 
 app.run(debug=True)
