@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* NOTE: HOLD SHIFT + CLICK REFRESH TO REFRESH AND UPDATE CSS
+  WITH CHROME */
+
+  .menu-container, html, body {
+    /* height: 100%; */
+    margin: 0;
+}
+
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px 0;
+
+    height: 500px;
+  }
+  
+  .title {
+    flex: 1 1 0;
+    text-align: center;
+    /* vertical-align: center; */
+    justify-content: center;
+    color: #ffff;
+    border: 1px solid white;  /* For debugging */
+    background-color: #65a4d8;
+    min-width: 100px;
+  }
+
+  .text {
+    flex: 3 1 0;
+    text-align: left;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid white;  /* For debugging */
+
+    height: 500px;
+    overflow-y: scroll;
+  }
+
+  /* Color of hyperlinks */
+  a {
+    color: #E1E1E1;
+  }
+  a:visited {
+    color: #65a4d8;
+  }
+  a:hover, a:active, a:focus {
+    color:#13294B;
+  }
+
+  /* Scroll Bar Styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+    overflow: overlay;
+  }
+  ::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+   }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b5baba;
+  }
