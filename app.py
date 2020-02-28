@@ -23,7 +23,7 @@ def hello_world():
 
 @app.route('/help')
 def get_help():
-    return render_template('GitHelpNow.html')
+    return render_template('GitHelpNow1.html')
 
 @app.route('/calendar')
 def calendar():
@@ -33,6 +33,7 @@ def calendar():
 def resources():
     return render_template('resources.html')
 
-@app.route('/homepage/')
-def homepage():
-    return render_template('homepage.html')
+import homepage
+import test
+
+app.run(debug=True)

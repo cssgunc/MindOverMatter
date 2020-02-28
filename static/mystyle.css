@@ -55,6 +55,11 @@ header {
 img{
   margin-left: 10%;
 } 
+
+.together {
+  width: 100%;
+  height: auto;
+}
 h1{
   float: right;
   margin-right: 15%;
