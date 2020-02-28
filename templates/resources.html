@@ -1,51 +1,91 @@
+{% extends "base.html" %} {% block body %}
+
 <!DOCTYPE html>
-<html>
-<head>
-<!-- <link href='resources.css' type = 'text/css' rel='stylesheet'> -->
-<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
-</head>
-<body>
-
-<div class="col1">1</div>
-<style>
-    .col1 {
-        height: 100%;
-        width: 30%;
-        background-color:#4B9CD3;
-        position: fixed;
-        left: 0;
-        top: 0;
-    } 
-</style>
-<!-- <title>MoM Resources</title>
-<h1 style="color: #13294B; font-weight: bold; font-size: 90px;">Welcome to the Resources Page!</h1> -->
-<div class="col2">
-    <style>
-        .col2 {
-            height: 100%;
-            width: 70%;
-            background-color:#13294B;
-            margin-left: 30%;
-            overflow: auto;
-        }
-        </style>
-    2
-    <div style="height:200vh;">Welcome to the Resources Page!</div>
-</div>
-
-</body>
+<html lang='en'>
+  <head>
+    <title>Some Web Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='resources.css') }}"/>
+  </head>
+    <div class="menu-container">
+      <div class="title">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Resources</h1>
+        <body>Insert an introductory message here. Explain stuff and abcdefg and add some encouraging
+          and wholesome message.
+        </body>
+        <br>
+        <br>
+        <input type="text" placeholder="Search...">
+      </div>
+      <div class = "text">
+        <h2><a href="http://activeminds.web.unc.edu/" target="_blank">Active Minds at Carolina</a></h2>
+        <dd>Active Minds at Carolina is a service and advocacy organization dedicated to raising awareness for and combating stigma against mental health issues on UNC’s campus and in the Chapel Hill community.
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="https://heellife.unc.edu/organization/artheels" target="_blank">ArtHeels</a></h2>
+        <dd>ArtHeels is a service-based organization that is passionate about bringing art to the UNC campus and the surrounding community. 
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="https://www.facebook.com/betanutheta/" target="_blank">Beta Nu Theta</a></h2>
+        <dd>Beta Nu Theta is UNC’s first black co-ed service fraternity, founded on the principles of activism, faith, service to others, and service to self.  Beta Nu Theta is for people who have a passion for people, mind-health, or just want to make new friends.
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="http://activeminds.web.unc.edu/" target="_blank">Active Minds at Carolina</a></h2>
+        <dd>Active Minds at Carolina is a service and advocacy organization dedicated to raising awareness for and combating stigma against mental health issues on UNC’s campus and in the Chapel Hill community.
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="https://heellife.unc.edu/organization/artheels" target="_blank">ArtHeels</a></h2>
+        <dd>ArtHeels is a service-based organization that is passionate about bringing art to the UNC campus and the surrounding community. 
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="https://www.facebook.com/betanutheta/" target="_blank">Beta Nu Theta</a></h2>
+        <dd>Beta Nu Theta is UNC’s first black co-ed service fraternity, founded on the principles of activism, faith, service to others, and service to self.  Beta Nu Theta is for people who have a passion for people, mind-health, or just want to make new friends.
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="http://activeminds.web.unc.edu/" target="_blank">Active Minds at Carolina</a></h2>
+        <dd>Active Minds at Carolina is a service and advocacy organization dedicated to raising awareness for and combating stigma against mental health issues on UNC’s campus and in the Chapel Hill community.
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="https://heellife.unc.edu/organization/artheels" target="_blank">ArtHeels</a></h2>
+        <dd>ArtHeels is a service-based organization that is passionate about bringing art to the UNC campus and the surrounding community. 
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="https://www.facebook.com/betanutheta/" target="_blank">Beta Nu Theta</a></h2>
+        <dd>Beta Nu Theta is UNC’s first black co-ed service fraternity, founded on the principles of activism, faith, service to others, and service to self.  Beta Nu Theta is for people who have a passion for people, mind-health, or just want to make new friends.
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="http://activeminds.web.unc.edu/" target="_blank">Active Minds at Carolina</a></h2>
+        <dd>Active Minds at Carolina is a service and advocacy organization dedicated to raising awareness for and combating stigma against mental health issues on UNC’s campus and in the Chapel Hill community.
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="https://heellife.unc.edu/organization/artheels" target="_blank">ArtHeels</a></h2>
+        <dd>ArtHeels is a service-based organization that is passionate about bringing art to the UNC campus and the surrounding community. 
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="https://www.facebook.com/betanutheta/" target="_blank">Beta Nu Theta</a></h2>
+        <dd>Beta Nu Theta is UNC’s first black co-ed service fraternity, founded on the principles of activism, faith, service to others, and service to self.  Beta Nu Theta is for people who have a passion for people, mind-health, or just want to make new friends.
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="http://activeminds.web.unc.edu/" target="_blank">Active Minds at Carolina</a></h2>
+        <dd>Active Minds at Carolina is a service and advocacy organization dedicated to raising awareness for and combating stigma against mental health issues on UNC’s campus and in the Chapel Hill community.
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="https://heellife.unc.edu/organization/artheels" target="_blank">ArtHeels</a></h2>
+        <dd>ArtHeels is a service-based organization that is passionate about bringing art to the UNC campus and the surrounding community. 
+        </dd>
+        &nbsp; &nbsp;
+        <h2><a href="https://www.facebook.com/betanutheta/" target="_blank">Beta Nu Theta</a></h2>
+        <dd>Beta Nu Theta is UNC’s first black co-ed service fraternity, founded on the principles of activism, faith, service to others, and service to self.  Beta Nu Theta is for people who have a passion for people, mind-health, or just want to make new friends.
+        </dd>
+        &nbsp; &nbsp;
+      </div>
+    </div>
+  </body>
 </html>
-<!-- <title>MoM Resources</title>
-<h1 style="color: #13294B; font-weight: bold; font-size: 90px;"><center>Welcome to the Resources Page!</center></h1>
-<ul>
-    <li><a href="http://activeminds.web.unc.edu/" target="_blank" style="color: white">Active Minds</a>
-    </li>
-    <dd>Active Minds at Carolina is a service and advocacy organization dedicated to raising awareness for and combating stigma against mental health issues on UNC’s campus and in the Chapel Hill community.
-    </dd>
-    <li><a href="https://heellife.unc.edu/organization/artheels" target="_blank" style="color: white">Art Heels</a></li>
-    <dd>ArtHeels is a service-based organization that is passionate about bringing art to the UNC campus and the surrounding community. 
-        </dd>
-    <li><a href="https://www.facebook.com/betanutheta/" target="_blank" style="color: white">Beta Nu Theta</a></li>
-    <dd>Beta Nu Theta is UNC’s first black co-ed service fraternity, founded on the principles of activism, faith, service to others, and service to self.  Beta Nu Theta is for people who have a passion for people, mind-health, or just want to make new friends.
-        </dd>
-  </ul> -->
+
+{% endblock %}

@@ -21,19 +21,14 @@ def hello(name=None):
 def hello_world():
     return 'Hello, World!'
 
-@app.route('/help')
-def get_help():
-    return render_template('GitHelpNow1.html')
-
 @app.route('/calendar')
 def calendar():
     return render_template('calendar.html')
 
-@app.route('/resources')
-def resources():
-    return render_template('resources.html')
-
 import homepage
 import test
+import help
+import database
+import resources
 
 app.run(debug=True)
