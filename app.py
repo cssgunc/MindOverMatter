@@ -21,10 +21,7 @@ def hello(name=None):
 def hello_world():
     return 'Hello, World!'
 
-@app.route('/calendar')
-def calendar():
-    return render_template('calendar.html')
-
+import calendar
 import homepage
 import test
 import help
