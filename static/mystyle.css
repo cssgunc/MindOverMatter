@@ -28,7 +28,8 @@ body::before {
 }
 body {
   background-color: white;
-  background-image: url('/static/dot-grid.png')
+  background-image: url('/static/dot-grid.png');
+  margin: 0px;
 }
 
 header {
@@ -57,8 +58,9 @@ img{
 } 
 
 .together {
-  width: 100%;
+  width: 100vw;
   height: auto;
+  margin-left: 0px;
 }
 h1{
   float: right;
