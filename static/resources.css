@@ -18,11 +18,11 @@
 
     height: 500px;
   }
-  
+
+  /* Title/Intro column */
   .title {
     flex: 1 1 0;
     text-align: center;
-    /* vertical-align: center; */
     justify-content: center;
     color: #ffff;
     border: 1px solid white;  /* For debugging */
@@ -30,6 +30,7 @@
     min-width: 100px;
   }
 
+  /* Resource List */
   .text {
     flex: 3 1 0;
     text-align: left;
@@ -68,4 +69,24 @@
    }
   ::-webkit-scrollbar-thumb:hover {
     background: #b5baba;
+  }
+
+  /* Resources page title styling */
+  h2 {
+    color: white;
+    font-size: 500%;
+    margin-top: 50%;
+  }
+
+  /* Resource list: Resource titles */
+  h3 {
+    font-size: 300%;
+    color: #65a4d8;
+  }
+
+  /* Resource list: description */
+  dd {
+    text-align: right;
+    font-size: 150%;
+    margin-left: 50%;
   }
