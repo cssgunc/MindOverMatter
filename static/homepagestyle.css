@@ -30,6 +30,7 @@ body {
   background-color: white;
   background-image: url('/static/dot-grid.png');
   margin: 0px;
+  font-family: 'Lato', sans-serif;
 }
 
 header {
