@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyle.css') }}" />   
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepagestyle.css') }}" />   
 </head>
 <body>
 <!-- <header>
@@ -25,7 +25,10 @@
     
        
     {% extends "base.html" %} {% block body %} 
+    <div>
     <img src="{{ url_for('static', filename='together.jpg') }}"  alt="Mind Over Matter" class ="together"></img>
+   <div><h1>stuff</h1></div> 
+    </div>
 
     
     <div class = "flexbox">

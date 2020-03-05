@@ -9,6 +9,18 @@
 <script src="{{ url_for('static', filename='GitHelp.js') }}"></script>
 {% endblock %}
 {% block body %} 
+<ul>
+{% for help in help_list %}
+{% if help.category == "website" %}
+website
+{% elif help.category == "call" %}
+call
+{% elif help.category == "chat" %}
+chat
+{% endif %}
+<li>{{ help.title }}</li>
+{% endfor %}
+</ul>
     
         <div class="grid">
             <div class="chat">
@@ -18,14 +30,19 @@
                             width="210">
                     </div>
                     <div id="ChatDropdown" class="dropdown-content">
-                        <a href="https://suicidepreventionlifeline.org/chat/">Suicide Chatline</a>
-                        <small>Get in touch with a counselor who will listen to you, understand how your problem is
-                            affecting
-                            you, provide support and share resources that may be helpful.</small>
-                        <a href="https://www.nami.org/">National Alliance on Mental Health Chatline</a>
-                        <small>Connect with a trained crisis counselor to receive free, 24/7 crisis support via text
-                            message.</small>
-                            <br> <br>
+                        {% for help in help_list %}
+                        {% if help.category == "chat_resource_one" %}
+                            <a href="{{ help.link }}">{{ help.title }}</a>
+                            <small>{{help.description}}</small>
+                            {% endif %}
+                        {% endfor %}
+                        {% for help in help_list %}
+                        {% if help.category == "chat_resource_two" %}
+                        <a href="{{ help.link }}">{{ help.title }}</a>
+                            <small>{{help.description}}</small>
+                            {% endif %}
+                        {% endfor %}
+                        <br><br>
                     </div>
                 </div>
             </div>
