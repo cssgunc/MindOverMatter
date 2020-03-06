@@ -1,5 +1,8 @@
 {% extends "base.html" %} {% block body %}
 
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Lato">
+
 <!DOCTYPE html>
 <html lang='en'>
   <head>
@@ -16,7 +19,12 @@
         <input type="text" placeholder="Search...">
       </div>
       <div class = "text">
-        <h3><a href="http://activeminds.web.unc.edu/" target="_blank">Active Minds at Carolina</a></h3>
+        {% for Resource in ResourcesList %}
+        <h3><a href="{{ Resource.link }}" target="_blank">{{ Resource.title }}</a></h3>
+        <dd>{{ Resource.description }}
+        </dd>
+        {% endfor %}
+        <!-- <h3><a href="http://activeminds.web.unc.edu/" target="_blank">Active Minds at Carolina</a></h3>
         <dd>Active Minds at Carolina is a service and advocacy organization dedicated to raising awareness for and combating stigma against mental health issues on UNC’s campus and in the Chapel Hill community.
         </dd>
         <h3><a href="https://heellife.unc.edu/organization/artheels" target="_blank">ArtHeels</a></h3>
@@ -33,7 +41,7 @@
         </dd>
         <h3><a href="https://www.facebook.com/betanutheta/" target="_blank">Beta Nu Theta</a></h3>
         <dd>Beta Nu Theta is UNC’s first black co-ed service fraternity, founded on the principles of activism, faith, service to others, and service to self.  Beta Nu Theta is for people who have a passion for people, mind-health, or just want to make new friends.
-        </dd>
+        </dd> -->
       </div>
     </div>
   </body>
