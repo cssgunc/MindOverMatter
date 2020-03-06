@@ -9,19 +9,6 @@
 <script src="{{ url_for('static', filename='GitHelp.js') }}"></script>
 {% endblock %}
 {% block body %} 
-<ul>
-{% for help in help_list %}
-{% if help.category == "website" %}
-website
-{% elif help.category == "call" %}
-call
-{% elif help.category == "chat" %}
-chat
-{% endif %}
-<li>{{ help.title }}</li>
-{% endfor %}
-</ul>
-    
         <div class="grid">
             <div class="chat">
                 <div class="dropdown">
@@ -30,18 +17,11 @@ chat
                             width="210">
                     </div>
                     <div id="ChatDropdown" class="dropdown-content">
-                        {% for help in help_list %}
-                        {% if help.category == "chat_resource_one" %}
+                        {% for help in chat_list %}
                             <a href="{{ help.link }}">{{ help.title }}</a>
                             <small>{{help.description}}</small>
-                            {% endif %}
                         {% endfor %}
-                        {% for help in help_list %}
-                        {% if help.category == "chat_resource_two" %}
-                        <a href="{{ help.link }}">{{ help.title }}</a>
-                            <small>{{help.description}}</small>
-                            {% endif %}
-                        {% endfor %}
+                    
                         <br><br>
                     </div>
                 </div>
@@ -53,21 +33,10 @@ chat
                             width="210">
                     </div>
                     <div id="callDropdown" class="dropdown-content">
-                        <a href="https://www.townofchapelhill.org/town-hall/departments-services/police/contact-us">Chapel
-                            Hill
-                            Police</a>
-                        <small>To report a previous or current crime, call 911</small>
-                        <a href="tel:919-966-3658">CAPS 24/7 Hotline</a>
-                        <small>Contact trained mental health professionals for any mental-health related crises</small>
-                        <a href="https://suicidepreventionlifeline.org/">Suicide Hotline</a>
-                        <small>Provies free and confidential emotional support to people in suicidal crisis or emotional
-                            distress 24 hours a day, 7 days a week, across the U.S.</small>
-                        <a href="https://www.nami.org/">National Alliance on Mental Health Hotline</a>
-                        <small>Nationwide peer-support service providing information, resourse referrals, and support to
-                            people
-                            living with mental health conditions, their family members and caregivers, mental health
-                            providers
-                            and the public.</small>
+                            {% for help in call_list %}
+                                <a href="{{ help.link }}">{{ help.title }}</a>
+                                <small>{{help.description}}</small>
+                            {% endfor %}
                             <br> <br>
                     </div>
                 </div>
@@ -79,14 +48,10 @@ chat
                             height="180" width="210">
                     </div>
                     <div id="WebsiteDropdown" class="dropdown-content">
-                        <a href="https://www.nami.org/">National Alliance on Mental Health</a>
-                        <small>Advocacy, education, support, and public awareness for individuals and families affected
-                            by
-                            mental illness.</small>
-                        <a href="https://healgrief.org/grief-support-resources/">HelpGrief</a>
-                        <small>Support network and resources for anyone going through grief or loss</small>
-                        <a href="https://mentalhealth.gov">MentalHealth.GOV</a>
-                        <small>National mental health information and education</small>
+                        {% for help in website_list %}
+                            <a href="{{ help.link }}">{{ help.title }}</a>
+                            <small>{{help.description}}</small>
+                        {% endfor %}
                         <br> <br>
 
                     </div>
