@@ -54,14 +54,18 @@ header {
 
 
 }
-img{
+/* img{
   margin-left: 10%;
-} 
+}  */
 
 .together {
+  background-image: url('/static/together.jpg');
+  margin-left: 10%;
   width: 100vw;
-  height: auto;
+  height: 900px;
   margin-left: 0px;
+  background-size: cover; /* Resize the background image to cover the entire container */
+
 }
 h1{
   float: right;
@@ -113,12 +117,44 @@ h1{
   justify-content: none;
 } 
 
-.nav {
+.typewriter {
+  position: absolute;
+  margin: 0px;
+  transform: translate(150pt, 200pt);
+  height: 100px;
+  color: white;
+  font-size: 25pt;
+  text-shadow: 2pt 2pt 2pt #000000;
+  /* animation: typewriter 4s steps(44) 1s 1 normal both,
+  blinkTextCursor 500ms steps(44) infinite normal; */
+}
+/* @keyframes typewriter{
+from{width: 0;}
+to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+from{border-right-color: rgba(255,255,255,.75);}
+to{border-right-color: transparent;}
+} */
+
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav, #navbar {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: #64a3d9;
+  overflow: hidden;
   
+}
+.relative{
+  position: relative;
 }
 
 .nav a {
@@ -137,3 +173,4 @@ h1{
   background-color:#49779E;
 
 }
+
