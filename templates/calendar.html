@@ -1,50 +1,16 @@
+{% extends "base.html" %}
+ 
+{% block body %} 
+
 <!DOCTYPE html>
 <html>
 
 <head>
 <link rel="stylesheet" type= "css" href="{{url_for('static', filename='calendar.css')}}">
-
-  <title>
-    News and Events
-  </title>
 </head>
 
 <body>
-  <img src = "MindOverMatter.jpg" alt = "MindOverMatter" class = "left">
-
-  <ul>
-    <li><a href="homepage.html">Home</a></li>
-    <li><a href="calendar.html">News</a></li>
-    <li><a href="help.html">Contact</a></li>
-    <li><a href="resources.html">Resources</a></li>
-  </ul>
-
-    <p>News & Events</p>
-        <div id="Get Help Now" class="tabcontent">
-                <h1>Get Help Now</h1>
-                <p>If you need immeadiate assistance, please click here.</p>
-              </div>
-              
-              <div id="Resources" class="tabcontent">
-                <h1>Resources</h1>
-                <p>Please click here for a list of our Resources.</p> 
-              </div>
-              
-              <div id="News & Events" class="tabcontent">
-                <h1>News & Events</h1>
-                <p>Please click here to see a calendar of our evetns.</p>
-              </div>
-              
-              <button class="tablink" onclick="openCity('Get Help Now', this, 'red')" id="defaultOpen">Get Help Now</button>
-              <button class="tablink" onclick="openCity('Resources', this, 'green')">Resources</button>
-              <button class="tablink" onclick="openCity('News & Events', this, 'blue')">News & Events</button>
-
-              </div>
-
-              <div class="topnav">
-                    <input type="text" placeholder="Search..">
-                  </div>
-
     <p>This is the calendar!</p>
     <iframe src="https://calendar.google.com/calendar/embed?src=uncmindovermatter%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </body>
+{ % endblock % }
