@@ -21,7 +21,7 @@ def hello(name=None):
 def hello_world():
     return 'Hello, World!'
 
-import calendar
+import calendarpage
 import homepage
 import test
 import help
