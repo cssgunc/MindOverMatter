@@ -6,15 +6,27 @@
     Mind/Matter - GitHelpNow
 </title>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='GitHelpNow.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 <script src="{{ url_for('static', filename='GitHelp.js') }}"></script>
 {% endblock %}
 {% block body %} 
+
+        <div class = "hotline">
+            <div class = "title">
+                ChatLine
+            </div>
+            <div class = "title">
+                Suicidal Provention Line
+            </div>
+        
+        </div>
+
         <div class="grid">
             <div class="chat">
                 <div class="dropdown">
                     <div class="container">
-                        <img onclick="ChatFunction()" class="dropbtn" src="{{ url_for('static', filename='live-chat-icon.png') }}" alt="chat" height="180"
-                            width="210">
+                        <img onclick="ChatFunction()" class="dropbtn" src="{{ url_for('static', filename='live-chat-icon.png') }}" alt="chat"
+                            width="340">
                     </div>
                     <div id="ChatDropdown" class="dropdown-content">
                         {% for help in chat_list %}
@@ -29,8 +41,8 @@
             <div class="call">
                 <div class="dropdown">
                     <div class="container">
-                        <img onclick="CallFunction()" class="dropbtn" src="{{ url_for('static', filename='live-chat-icon.png') }}" alt="chat" height="180"
-                            width="210">
+                        <img onclick="CallFunction()" class="dropbtn" class="fas fa-phone-square-alt" alt="chat"
+                            width="340">
                     </div>
                     <div id="callDropdown" class="dropdown-content">
                             {% for help in call_list %}
@@ -45,7 +57,7 @@
                 <div class="dropdown">
                     <div class="container">
                         <img onclick="WebsiteFunction()" class="dropbtn" src="{{ url_for('static', filename='live-chat-icon.png') }}" alt="chat"
-                            height="180" width="210">
+                             width="340">
                     </div>
                     <div id="WebsiteDropdown" class="dropdown-content">
                         {% for help in website_list %}
