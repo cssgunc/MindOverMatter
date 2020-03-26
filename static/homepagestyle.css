@@ -28,7 +28,7 @@ body::before {
 }
 body {
   background-color: white;
-  background-image: url('/static/dot-grid.png');
+  /* background-image: url('/static/dot-grid.png'); */
   margin: 0px;
   font-family: 'Lato', sans-serif;
 }
@@ -45,14 +45,19 @@ header {
   flex: 25%;
   height: 100%;
   text-align: center;
-  background-color: #64a3d9;
+  /* background-color: #64a3d9; */
   height: 600px;
-  outline: 4px solid white;
-  outline-offset: -15px;
-  outline-style:double;
-  color: white;
+  /* outline: 4px solid white; */
+  /* outline-offset: -15px; */
+  /* outline-style:double; */
+  color: #64a3d9;
 
 
+}
+.flexBoxH2{
+  float: left;
+  font-size: 50px;
+  margin-bottom: 2%;
 }
 /* img{
   margin-left: 10%;
@@ -68,30 +73,42 @@ header {
 
 }
 h1{
-  float: right;
-  margin-right: 15%;
   text-align: center;
-  line-height: 100px;
+  line-height: 200px;
   height: 100px;
   font-size: 70pt;
+  float: right;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 0px;
 }
+
 .right {
   flex: 70%;
   height: 600px;
   text-align: center;
   margin-left: 6.9%;
-  outline: 4px solid white;
-  outline-offset: -15px;
-  background-color: #64a3d9;
-  outline-style:double;
-  color: white;
-
-  
-
-  
+  /* outline: 4px solid white;
+  outline-offset: -15px; */
+  /* background-color: #64a3d9;
+  outline-style:double; */
+  color: #64a3d9;  
+}
+.flexBoxP{
+  float: left;
+  font-size: 24px;
+  text-align: left;
+}
+.flexBoxUL{
+  float: left;
+  font-size: 24px;
+  text-align: left;
+  margin-top: 0px;
 }
 
-.blue {
+.logoImg{
+  margin-left: 5%;
+  margin-top: 2%;
   
 }
 
@@ -114,7 +131,8 @@ h1{
 .logoCenter {
   
 
-  justify-content: none;
+  
+  justify-content: space-evenly;
 } 
 
 .typewriter {
@@ -151,7 +169,7 @@ to{border-right-color: transparent;}
   width: 100%;
   background-color: #64a3d9;
   overflow: hidden;
-  
+  z-index: 100;
 }
 .relative{
   position: relative;
