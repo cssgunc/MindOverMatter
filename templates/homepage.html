@@ -26,10 +26,14 @@
 
 
     {% extends "base.html" %} {% block body %}
+
+
     <div class="together">
-        <p class="typewriter">Mind Above Matter is a nonprofit corporation that provides an online <br> platform for college
+
+        <div id="typewriter"></div>
+        <!-- <p class="typewriter">Mind Above Matter is a nonprofit corporation that provides an online <br> platform for college
             and university students to search for,<br> learn about, and track upcoming events for the resources that <br> best
-            suit their particular mental health needs.</p>
+            suit their particular mental health needs.</p> -->
     </div>
 
 
@@ -42,14 +46,58 @@
                 <li>some other shit idk</li>
             </ul>
         </div>
+        <div class="line"></div>
 
         <div class="right blue">
             <h2 class="flexBoxH2">About Us</h2>
-            <p class="flexBoxP">Hello this is some details about mind above matter Mind Above Matter is a nonprofit corporation that provides an online platform for college
-                and university students to search for, learn about, and track upcoming events for the resources that best
+            <p class="flexBoxP">Hello this is some details about mind above matter Mind Above Matter is a nonprofit
+                corporation that provides an online platform for college
+                and university students to search for, learn about, and track upcoming events for the resources that
+                best
                 suit their particular mental health needs.</p>
         </div>
     </div>
+
+    <script>
+        var aText = new Array(
+            "Mind Above Matter is a nonprofit corporation that provides an online",
+            "platform for college and university students to search for,",
+            "learn about, and track upcoming events for the resources that",
+            "best suit their particular mental health needs.");
+
+        var iSpeed = 100; // time delay of print out
+        var iIndex = 0; // start printing array at this posision
+        var iArrLength = aText[0].length; // the length of the text array
+        var iScrollAt = 20; // start scrolling up at this many lines
+
+        var iTextPos = 0; // initialise text position
+        var sContents = ''; // initialise contents variable
+        var iRow; // initialise current row
+
+        function typewriter() {
+            sContents = ' ';
+            iRow = Math.max(0, iIndex - iScrollAt);
+            var destination = document.getElementById("typewriter");
+
+            while (iRow < iIndex) {
+                sContents += aText[iRow++] + '<br />';
+            }
+            destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "|";
+            if (iTextPos++ == iArrLength) {
+                iTextPos = 0;
+                iIndex++;
+                if (iIndex != aText.length) {
+                    iArrLength = aText[iIndex].length;
+                    setTimeout("typewriter()", 500);
+                }
+            } else {
+                setTimeout("typewriter()", iSpeed);
+            }
+        }
+
+
+        typewriter();
+    </script>
     {% endblock %}
 </body>
 
