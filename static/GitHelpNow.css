@@ -91,5 +91,7 @@
   margin: 0 auto;
   text-align: center;
   font-weight: bold;
-  color:red;
+  color:#64a3d9;
+  font-size:30px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
