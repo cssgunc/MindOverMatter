@@ -47,13 +47,13 @@
 
   /* Color of hyperlinks */
   a {
-    color: #E1E1E1;
+    color: #13294B;
   }
   a:visited {
     color: #65a4d8;
   }
   a:hover, a:active, a:focus {
-    color:#13294B;
+    color:rgb(211, 218, 230);
   }
 
   /* Scroll Bar Styling */
@@ -76,7 +76,7 @@
   /* Resources page title styling */
   h2 {
     color: white;
-    font-size: 500%;
+    font-size: 400%;
     margin-top: 50%;
   }
 
@@ -89,6 +89,6 @@
   /* Resource list: description */
   dd {
     text-align: right;
-    font-size: 150%;
+    font-size: 100%;
     margin-left: 50%;
   }

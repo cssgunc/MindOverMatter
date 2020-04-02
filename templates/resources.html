@@ -20,28 +20,10 @@
       </div>
       <div class = "text">
         {% for Resource in ResourcesList %}
-        <h3><a href="{{ Resource.link }}" target="_blank">{{ Resource.title }}</a></h3>
+        <h3><a href="{{ loop.index }}" target="_blank">{{ Resource.title }}</a></h3>
         <dd>{{ Resource.description }}
         </dd>
         {% endfor %}
-        <!-- <h3><a href="http://activeminds.web.unc.edu/" target="_blank">Active Minds at Carolina</a></h3>
-        <dd>Active Minds at Carolina is a service and advocacy organization dedicated to raising awareness for and combating stigma against mental health issues on UNC’s campus and in the Chapel Hill community.
-        </dd>
-        <h3><a href="https://heellife.unc.edu/organization/artheels" target="_blank">ArtHeels</a></h3>
-        <dd>ArtHeels is a service-based organization that is passionate about bringing art to the UNC campus and the surrounding community. 
-        </dd>
-        <h3><a href="https://www.facebook.com/betanutheta/" target="_blank">Beta Nu Theta</a></h3>
-        <dd>Beta Nu Theta is UNC’s first black co-ed service fraternity, founded on the principles of activism, faith, service to others, and service to self.  Beta Nu Theta is for people who have a passion for people, mind-health, or just want to make new friends.
-        </dd>
-        <h3><a href="http://activeminds.web.unc.edu/" target="_blank">Active Minds at Carolina</a></h3>
-        <dd>Active Minds at Carolina is a service and advocacy organization dedicated to raising awareness for and combating stigma against mental health issues on UNC’s campus and in the Chapel Hill community.
-        </dd>
-        <h3><a href="https://heellife.unc.edu/organization/artheels" target="_blank">ArtHeels</a></h3>
-        <dd>ArtHeels is a service-based organization that is passionate about bringing art to the UNC campus and the surrounding community. 
-        </dd>
-        <h3><a href="https://www.facebook.com/betanutheta/" target="_blank">Beta Nu Theta</a></h3>
-        <dd>Beta Nu Theta is UNC’s first black co-ed service fraternity, founded on the principles of activism, faith, service to others, and service to self.  Beta Nu Theta is for people who have a passion for people, mind-health, or just want to make new friends.
-        </dd> -->
       </div>
     </div>
   </body>
