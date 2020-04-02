@@ -86,6 +86,12 @@ h1{
   margin-bottom: 0px;
 }
 
+h3 {
+  text-align: left;
+  font-size: 30px;
+  margin-bottom: 0%;
+}
+
 .right {
   flex: 70%;
   height: 600px;
@@ -141,53 +147,48 @@ h1{
 }
 .logoCenter {
   
-
-  
   justify-content: space-evenly;
 } 
 
-/* .typewriter {
+
+.mam {
   position: absolute;
   margin: 0px;
-  transform: translate(150pt, 200pt);
+  transform: translate(275pt, 125pt);
   height: 100px;
   color: white;
-  font-size: 25pt;
+  font-size: 50pt;
   text-shadow: 2pt 2pt 2pt #000000;
-  /* animation: typewriter 4s steps(44) 1s 1 normal both,
-  blinkTextCursor 500ms steps(44) infinite normal; 
-} */
+}
+
 #typewriter {
   position: absolute;
   margin: 0px;
-  transform: translate(150pt, 200pt);
+  transform: translate(275pt, 225pt);
   height: 100px;
   color: white;
   font-size: 25pt;
   text-shadow: 2pt 2pt 2pt #000000;
-  /* overflow: hidden; /* Ensures the content is not revealed until the animation 
-  border-right: 10pt solid #64a3d9;  The typwriter cursor 
-  white-space: nowrap;  Keeps the content on a single line 
-  margin: 0 auto;  Gives that scrolling effect as the typing happens 
-  letter-spacing: .15em; Adjust as needed 
-  */ 
-  /* animation: 
-    typing 3.5s steps(20, end),
-    blink-caret .5s step-end infinite;  */
+} 
+
+#cursor {
+	display: inline-block;
+  vertical-align: middle;
+  transform: translate(275pt, 225pt);
+	width: 3px;
+	height: 50px;
+	background-color: white;
+	animation: blink .75s step-end infinite;
 }
 
-/* The typing effect
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: white; 
+	}
 }
-
- /* The typewriter cursor effect  */
-/* @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; } 
-} */ 
-
 
 
 .sticky {

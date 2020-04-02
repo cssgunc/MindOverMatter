@@ -29,11 +29,9 @@
 
 
     <div class="together">
-
+        <div class="mam">Mind Above Matter is...</div>
         <div id="typewriter"></div>
-        <!-- <p class="typewriter">Mind Above Matter is a nonprofit corporation that provides an online <br> platform for college
-            and university students to search for,<br> learn about, and track upcoming events for the resources that <br> best
-            suit their particular mental health needs.</p> -->
+        <div id="cursor"></div>
     </div>
 
 
@@ -50,53 +48,127 @@
 
         <div class="right blue">
             <h2 class="flexBoxH2">About Us</h2>
+            <h3>Our Mission</h3>
             <p class="flexBoxP">Hello this is some details about mind above matter Mind Above Matter is a nonprofit
                 corporation that provides an online platform for college
                 and university students to search for, learn about, and track upcoming events for the resources that
                 best
                 suit their particular mental health needs.</p>
+            <h3>What We Do</h3>
+            <h3>More Stuff</h3>
         </div>
     </div>
 
     <script>
-        var aText = new Array(
-            "Mind Above Matter is a nonprofit corporation that provides an online",
-            "platform for college and university students to search for,",
-            "learn about, and track upcoming events for the resources that",
-            "best suit their particular mental health needs.");
+        var _CONTENT = [
+            "• who we are",
+            "• our goals",
+            "• don't be shy",
+            "• put some more"
+        ];
 
-        var iSpeed = 100; // time delay of print out
-        var iIndex = 0; // start printing array at this posision
-        var iArrLength = aText[0].length; // the length of the text array
-        var iScrollAt = 20; // start scrolling up at this many lines
+        // Current sentence being processed
+        var _PART = 0;
 
-        var iTextPos = 0; // initialise text position
-        var sContents = ''; // initialise contents variable
-        var iRow; // initialise current row
+        // Character number of the current sentence being processed 
+        var _PART_INDEX = 0;
 
-        function typewriter() {
-            sContents = ' ';
-            iRow = Math.max(0, iIndex - iScrollAt);
-            var destination = document.getElementById("typewriter");
+        // Holds the handle returned from setInterval
+        var _INTERVAL_VAL;
 
-            while (iRow < iIndex) {
-                sContents += aText[iRow++] + '<br />';
-            }
-            destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "|";
-            if (iTextPos++ == iArrLength) {
-                iTextPos = 0;
-                iIndex++;
-                if (iIndex != aText.length) {
-                    iArrLength = aText[iIndex].length;
-                    setTimeout("typewriter()", 500);
-                }
-            } else {
-                setTimeout("typewriter()", iSpeed);
+        // Element that holds the text
+        var _ELEMENT = document.querySelector("#typewriter");
+
+        // Cursor element 
+        var _CURSOR = document.querySelector("#cursor");
+
+        // Implements typing effect
+        function Type() {
+            // Get substring with 1 characater added
+            var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+            _ELEMENT.innerHTML = text;
+            _PART_INDEX++;
+
+            // If full sentence has been displayed then start to delete the sentence after some time
+            if (text === _CONTENT[_PART]) {
+                // Hide the cursor
+                _CURSOR.style.display = 'none';
+
+                clearInterval(_INTERVAL_VAL);
+                setTimeout(function () {
+                    _INTERVAL_VAL = setInterval(Delete, 50);
+                }, 1000);
             }
         }
 
+        // Implements deleting effect
+        function Delete() {
+            // Get substring with 1 characater deleted
+            var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+            _ELEMENT.innerHTML = text;
+            _PART_INDEX--;
 
-        typewriter();
+            // If sentence has been deleted then start to display the next sentence
+            if (text === '') {
+                clearInterval(_INTERVAL_VAL);
+
+                // If current sentence was last then display the first one, else move to the next
+                if (_PART == (_CONTENT.length - 1))
+                    _PART = 0;
+                else
+                    _PART++;
+
+                _PART_INDEX = 0;
+
+                // Start to display the next sentence after some time
+                setTimeout(function () {
+                    _CURSOR.style.display = 'inline-block';
+                    _INTERVAL_VAL = setInterval(Type, 100); 
+                }, 200);
+            }
+        }
+
+        // Start the typing effect on load
+        _INTERVAL_VAL = setInterval(Type, 100);
+
+        // var aText = new Array(
+        //     "Mind Above Matter is a nonprofit corporation that provides an online",
+        //     "platform for college and university students to search for,",
+        //     "learn about, and track upcoming events for the resources that",
+        //     "best suit their particular mental health needs.");
+
+        // var iSpeed = 100; // time delay of print out
+        // var iIndex = 0; // start printing array at this posision
+        // var iArrLength = aText[0].length; // the length of the text array
+        // var iScrollAt = 20; // start scrolling up at this many lines
+
+        // var iTextPos = 0; // initialise text position
+        // var sContents = ''; // initialise contents variable
+        // var iRow; // initialise current row
+
+        // function typewriter() {
+        //     sContents = ' ';
+        //     iRow = Math.max(0, iIndex - iScrollAt);
+        //     var destination = document.getElementById("typewriter");
+
+        //     while (iRow < iIndex) {
+        //         sContents += aText[iRow++] + '<br />';
+        //     }
+        //     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "|";
+        //     if (iTextPos++ == iArrLength) {
+        //         iTextPos = 0;
+        //         iIndex++;
+        //         if (iIndex != aText.length) {
+        //             iArrLength = aText[iIndex].length;
+        //             setTimeout("typewriter()", 500);
+        //         }
+        //     } else {
+        //         setTimeout("typewriter()", iSpeed);
+        //     }
+        // }
+
+
+        // typewriter();
     </script>
     {% endblock %}
 </body>
