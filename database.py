@@ -10,6 +10,8 @@ class Post(db.Model):
     link = db.Column(db.String(80), unique=True, nullable=False)
     title = db.Column(db.String, unique=True, nullable=False)
     description = db.Column(db.String, unique=True, nullable=False)
+    email = db.Column(db.String, unique=True, nullable=False)
+    other = db.Column(db.String, unique=True, nullable=False)
 
     def __repr__(self):
         return '<Post %r>' % self.link
@@ -17,7 +19,7 @@ class Post(db.Model):
 @app.route("/addresource", methods=['GET', 'POST'])
 def add_post():
     if request.method == "POST":
-        post = Post(link=request.form["link"],title=request.form['title'],description=request.form['description'])
+        post = Post(link=request.form["link"],title=request.form['title'],description=request.form['description'],email=request.form['email'],other=request.form['other'])
         db.session.add(post)
         db.session.commit()
 
