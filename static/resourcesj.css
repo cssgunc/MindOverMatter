@@ -1,22 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
-title {
-    color: rgb(136, 28, 28);
-    font-size: 400%;
-    margin-top: 50%;
-  }
-
   /* Resource list: Resource titles */
-  h3 {
-    font-size: 300% "Lato", serif;
-    color: #65a4d8;
+  h1 {
+    font-size: 300%;
+    font-family: Lato;
+    color: black;
+    text-align: left;
   }
 
   /* Resource list: description */
   dd {
-    text-align: right;
+    text-align: left;
     font-size: 100%;
-    margin-left: 50%;
   }
 
   /* Color of hyperlinks */
@@ -28,4 +23,12 @@ title {
   }
   a:hover, a:active, a:focus {
     color:rgb(211, 218, 230);
+  }
+
+  div {
+    background-color: white;
+    width: 75%;
+    border: 50px solid #65a4d8;
+    padding: 5%;
+    margin: 10%;
   }

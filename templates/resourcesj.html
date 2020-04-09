@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{resource.title}}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='resourcesj.css') }}"/>
 </head>
-<body>
+<!-- <body> -->
     <ul id="navigation">
-    <h3>{{resource.title}}</h3>
-        <li><a href="url"></a></li>
+        <!-- <li><a href="url"></a></li> -->
     </ul>
-
-    <h1>Description</h1>
-    {{resource.description}}
-    <dd>Contact Information about individual random resource</dd>
-    {{resource.other}}
-</body>
+        <div>
+        <h1>{{resource.title}}</h1>
+            {{resource.description}}
+            <dd>Contact Information about individual random resource</dd>
+            {{resource.other}}
+        </div>
+<!-- </body> -->
 </html>
