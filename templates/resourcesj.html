@@ -3,15 +3,19 @@
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='resourcesj.css') }}"/>
 </head>
-<!-- <body> -->
     <ul id="navigation">
         <!-- <li><a href="url"></a></li> -->
     </ul>
         <div>
         <h1>{{resource.title}}</h1>
-            {{resource.description}}
-            <dd>Contact Information about individual random resource</dd>
-            {{resource.other}}
+            <h2>
+                {{resource.description}}
+            </h2>
+            <h3>
+                Contact Information about individual random resource
+            </h3>
+            <h4>
+                {{resource.other}}
+            </h4>
         </div>
-<!-- </body> -->
 </html>

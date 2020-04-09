@@ -9,8 +9,19 @@
   }
 
   /* Resource list: description */
-  dd {
+  h2 {
     text-align: left;
+    font-family: Lato;
+    font-size: 100%;
+  }
+  h3 {
+    text-align: left;
+    font-family: Lato;
+    font-size: 100%;
+  }
+  h4 {
+    text-align: left;
+    font-family: Lato;
     font-size: 100%;
   }
 
@@ -27,7 +38,6 @@
 
   div {
     background-color: white;
-    width: 75%;
     border: 50px solid #65a4d8;
     padding: 5%;
     margin: 10%;
