@@ -42,11 +42,12 @@ header {
 }
 
 .left {
-  flex: 25%;
-  height: 100%;
-  text-align: center;
-  /* background-color: #64a3d9; */
   height: 600px;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  /* background-color: #64a3d9; */
+  /* height: 600px; */
   /* outline: 4px solid white; */
   /* outline-offset: -15px; */
   /* outline-style:double; */
@@ -78,6 +79,11 @@ header {
   background-size: cover; /* Resize the background image to cover the entire container */
 
 }
+
+strong, em {
+  color: #64a3d9;
+}
+
 h1{
   text-align: center;
   line-height: 200px;
@@ -87,16 +93,23 @@ h1{
   margin-right: 17%;
   margin-top: 2%;
   margin-bottom: 0px;
+  color: #203344;
 }
 
 h3 {
   text-align: left;
   font-size: 30px;
   margin-bottom: 0%;
+  color: #203344;
 }
 
 .contact {
   padding-top: 15px;
+}
+
+.flexBoxH2 {
+  font-size: 60pt;
+  text-align:left;
 }
 
 .footer {
@@ -116,10 +129,11 @@ h3 {
 }
 
 .right {
-  flex: 70%;
+  /* height: 600px; */
+  width: 90%;
   height: 600px;
   text-align: center;
-  margin-left: 6.9%;
+  margin: auto;
   /* outline: 4px solid white;
   outline-offset: -15px; */
   /* background-color: #64a3d9;
@@ -138,12 +152,14 @@ h3 {
   float: left;
   font-size: 24px;
   text-align: left;
+  color: #203344;
 }
 .flexBoxUL{
   float: left;
   font-size: 24px;
   text-align: left;
   margin-top: 0px;
+  color: #203344;
 }
 
 .logoImg{
@@ -177,20 +193,20 @@ h3 {
 .mam {
   position: absolute;
   margin: 0px;
-  transform: translate(275pt, 125pt);
+  transform: translate(190pt, 125pt);
   height: 100px;
   color: white;
-  font-size: 50pt;
+  font-size: 75pt;
   text-shadow: 2pt 2pt 2pt #000000;
 }
 
 #typewriter {
   position: absolute;
   margin: 0px;
-  transform: translate(275pt, 225pt);
+  transform: translate(190pt, 220pt);
   height: 100px;
   color: white;
-  font-size: 25pt;
+  font-size: 40pt;
   text-shadow: 2pt 2pt 2pt #000000;
 } 
 
@@ -198,10 +214,10 @@ h3 {
 	display: inline-block;
   vertical-align: middle;
   transform: translate(275pt, 225pt);
-	width: 3px;
-	height: 50px;
-	background-color: white;
-	animation: blink .75s step-end infinite;
+	width: 0px;
+	height: 0px;
+  background-color: white;
+  color: transparent;
 }
 
 @keyframes blink {
