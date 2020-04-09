@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-
-app = Flask(__name__)
+from __main__ import app
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
@@ -24,6 +23,10 @@ def add_post():
 
     return render_template("addpost.html")
 
+@app.route("/editresource", methods=['GET', 'POST'])
+def edit_post():
+    return
+
 @app.route("/deletepost/<int:postid>")
 def delete_post(postid):
     post = Post.query.get(postid)
@@ -38,11 +41,5 @@ def delete_post(postid):
 def create_db():
     db.create_all()
     return "db created"
-
-@app.route('/')
-def hello_world():
-    return render_template("index.html", posts=Post.query.all())
-
-app.run(debug=True)
 
     
