@@ -87,22 +87,11 @@
     justify-content: space-around;
 }
 
-.chat_title {
+.title{
+  width:400px;
   position: relative;
   margin: 0 auto;
   text-align: center;
-  font-weight: bold;
-  color:#64a3d9;
-  font-size:50px;
-}
-
-.prevention_title {
-  text-align: center;
-  border-top-color: #64a3d9;
-  border-left-color: #64a3d9;
-  border-right-color:#64a3d9;
-  border-bottom-color:#64a3d9;
-  border-style: solid;
   font-weight: bold;
   color:#64a3d9;
   font-size:50px;
