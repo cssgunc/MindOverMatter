@@ -5,10 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyle.css') }}" />   
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepagestyle.css') }}" />
 </head>
+
 <body>
-<header>
+    <!-- <header>
     <div class = "logocenter">
         <img src="{{ url_for('static', filename='Logo_no_words.png') }}"   width="200" height="200" alt="Mind Over Matter"></img>
         <h1>Put your mind first</h1>
@@ -20,16 +21,125 @@
             <a href="contact.asp">Resources</a>
             <a href="about.asp">Events</a>
             <a href="about.asp">About</a>
-    </div>
-    
-    <div class = "flexbox">
-    <div class = "left blue">
-    <h2>Events</h2>
+    </div> -->
+
+
+
+    {% extends "base.html" %} {% block body %}
+
+
+    <div class="together">
+        <div class="mam">Mind Above Matter...</div>
+        <div id="typewriter"></div>
+        <div id="cursor"></div>
     </div>
 
-    <div class = "right blue">
-        <h2>Resources</h2>
+
+    <div class="flexbox">
+        <div class="left blue">
+            <h2 class="flexBoxH2">Events</h2>
+            <ul class="flexBoxUL">
+                <li>company picnic</li>
+                <li>mental health career fair</li>
+                <li>some other shit idk</li>
+            </ul>
+        </div>
+        <div class="line"></div>
+
+        <div class="right blue">
+            <h2 class="flexBoxH2">About Us</h2>
+            <h3>Welcome to Mind Above Matter’s website! </h3>
+            <p class="flexBoxP">
+                Mind Above Matter is a nonprofit corporation that provides an online platform for college and university students to search for, learn about, and track upcoming events for the resources that best suit their particular mental health needs.
+                Start by searching for mental health resources with our <em><strong>Search Bar</strong></em> or by looking for one you already know with <em><strong>Resources</strong></em>!
+                Under the <em><strong>Resources</strong></em> section, you will find a complete list of all the on-campus mental health resources that UNC provides.
+                Our <em><strong>Search Bar</strong></em> has multiple tags and keywords to help you find the perfect resource for YOU!
+                The <em><strong>Calendar</strong></em> provides a day by day schedule of what mental health related events are at UNC.
+                </p>
+            <h3>For immediate help, see the <em>Get Help</em> tab up above.</h3>
+            <h3 class="spacing">In an emergency, please call 911.</h3>
+
+        </div>
     </div>
-    </div>
+    
+  <div class="footer"><p class="contact">Email: uncmindovermatter@gmail.com | 
+    Instagram: @uncmindabovematter</p></div>
+
+    <script>
+        var _CONTENT = [
+            "• finds you mental health resources",
+            "• connects you with communities",
+            "• helps you take care of you",
+            "• puts your mind first"
+
+        ];
+
+        // Current sentence being processed
+        var _PART = 0;
+
+        // Character number of the current sentence being processed 
+        var _PART_INDEX = 0;
+
+        // Holds the handle returned from setInterval
+        var _INTERVAL_VAL;
+
+        // Element that holds the text
+        var _ELEMENT = document.querySelector("#typewriter");
+
+        // Cursor element 
+        var _CURSOR = document.querySelector("#cursor");
+
+        // Implements typing effect
+        function Type() {
+            // Get substring with 1 characater added
+            var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+            _ELEMENT.innerHTML = text;
+            _PART_INDEX++;
+
+            // If full sentence has been displayed then start to delete the sentence after some time
+            if (text === _CONTENT[_PART]) {
+                // Hide the cursor
+                _CURSOR.style.display = 'none';
+
+                clearInterval(_INTERVAL_VAL);
+                setTimeout(function () {
+                    _INTERVAL_VAL = setInterval(Delete, 50);
+                }, 1000);
+            }
+        }
+
+        // Implements deleting effect
+        function Delete() {
+            // Get substring with 1 characater deleted
+            var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+            _ELEMENT.innerHTML = text;
+            _PART_INDEX--;
+
+            // If sentence has been deleted then start to display the next sentence
+            if (text === '') {
+                clearInterval(_INTERVAL_VAL);
+
+                // If current sentence was last then display the first one, else move to the next
+                if (_PART == (_CONTENT.length - 1))
+                    _PART = 0;
+                else
+                    _PART++;
+
+                _PART_INDEX = 0;
+
+                // Start to display the next sentence after some time
+                setTimeout(function () {
+                    _CURSOR.style.display = 'inline-block';
+                    _INTERVAL_VAL = setInterval(Type, 100); 
+                }, 200);
+            }
+        }
+
+        // Start the typing effect on load
+        _INTERVAL_VAL = setInterval(Type, 100);
+    </script>
+
+    {% endblock %}
 </body>
+
 </html>

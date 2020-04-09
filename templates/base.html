@@ -5,24 +5,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyle.css') }}" />   
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepagestyle.css') }}" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     {% block head %}
     {% endblock %}
 </head>
+
 <body>
-<header>
-    <div class = "logocenter">
-        <img src="{{ url_for('static', filename='Logo_no_words.png') }}"   width="200" height="200" alt="Mind Over Matter"></img>
-        <h1>Put your mind first</h1>
+    <header>
+        <div class="logocenter">
+            <img src="{{ url_for('static', filename='newLogo.png') }}" width="200" height="200"
+                alt="Mind Over Matter" class="logoImg"></img>
+            <h1>Put your mind first</h1>
+
+        </div>
+        <!-- <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 226 || document.documentElement.scrollTop > 226) {
+            // document.getElementById("logocenter").style.fontSize = "30px";
+            document.getElementById("logocenter").style.display = none;
+
+        //   } else {
+        //     document.getElementById("logocenter").style.fontSize = "90px";
+          }
+        }
+        </script> -->
+
+
+    </header>
+    <div class="nav" id ="navbar">
+        <a href="default.asp">Home</a>
+        <a href="news.asp">Get Help Now</a>
+        <a href="contact.asp">Resources</a>
+        <a href="about.asp">Events</a>
+        <a href="about.asp">About</a>
     </div>
-</header>
-    <div class = "nav">
-            <a href="default.asp">Home</a>
-            <a href="news.asp">Get Help Now</a>
-            <a href="contact.asp">Resources</a>
-            <a href="about.asp">Events</a>
-            <a href="about.asp">About</a>
-    </div>
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        // var divRelative = document.getElementsByClassName("together");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+                // divRelative.classList.add("together")
+
+            } else {
+                navbar.classList.remove("sticky");
+                // divRelative.classList.remove("together")
+            }
+        }
+    </script>
     {% block body %}{% endblock %}
 </body>
+
 </html>
