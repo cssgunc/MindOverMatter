@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <title>{{resource.title}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='resourcesj.css') }}"/>
 </head>
 <body>
     <ul id="navigation">
-    {{resource.title}}
+    <h3>{{resource.title}}</h3>
         <li><a href="url"></a></li>
     </ul>
 
     <h1>Description</h1>
+    {{resource.description}}
     <dd>Contact Information about individual resource</dd>
-    
+    {{resource.other}}
 </body>
 </html>
