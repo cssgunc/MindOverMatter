@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Add a resource!</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Delete</th>
+        <th>ID</th>
+        <th>Link</th>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+      {% for post in posts %}
+      <tr>
+        <td><a href="/deletepost/{{ post.id }}">Delete</a></td>
+        <td>{{ post.id }}</td>
+        <td>{{ post.link }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.description }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

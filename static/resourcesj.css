@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+  /* Resource list: Resource titles */
+  h1 {
+    font-size: 300%;
+    font-family: Lato;
+    color: black;
+    text-align: left;
+  }
+
+  /* Resource list: description */
+  h2 {
+    text-align: left;
+    font-family: Lato;
+    font-size: 100%;
+  }
+  h3 {
+    text-align: left;
+    font-family: Lato;
+    font-size: 100%;
+  }
+  h4 {
+    text-align: left;
+    font-family: Lato;
+    font-size: 100%;
+  }
+
+  /* Color of hyperlinks */
+  a {
+    color: #13294B;
+  }
+  a:visited {
+    color: #65a4d8;
+  }
+  a:hover, a:active, a:focus {
+    color:rgb(211, 218, 230);
+  }
+
+  div {
+    background-color: white;
+    border: 50px solid #65a4d8;
+    padding: 5%;
+    margin: 10%;
+  }
