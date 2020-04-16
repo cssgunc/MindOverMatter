@@ -130,12 +130,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-top-color: black;
-      border-left-color: black;
-      border-right-color: black;
-      border-bottom-color: black;
-      border-width: .1em;
-      border-style: solid;
       height: 200px;
       background: #64a3d9;
       border-radius: 10px;;
