@@ -1,0 +1,39 @@
+.gallery {
+    display: flex;
+    align-items: center;
+}
+
+.person{
+    width: 30%;
+    padding: 2%;
+}
+.peopleimages{
+    width: 25%;
+    height: auto;
+}
+
+.bios{
+    text-align: left;
+    color: #203344;
+    font-size: 14pt;
+}
+.whywestarted{
+    text-align: left;
+    color: #203344;
+    font-size: 14pt;
+
+}
+.title{font-size: 69px;}
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color:#64a3d9;
+    text-align: center;
+    height: 50px;
+  }
+.right.blue{
+      height: fit-content;
+}
