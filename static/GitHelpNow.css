@@ -10,16 +10,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-color: black;
+    /*border-top-color: black;
     border-left-color: black;
     border-right-color: black;
     border-bottom-color: black;
-    border-width: .1em;
-    border-style: solid;
+    border-width: 0;
+    border-style: solid;*/
     height: 200px;
     background: #64a3d9;
     border-radius: 10px;;
     margin: 0 auto;
+    color: white; 
+    text-shadow:-2px -2px 0 #000, 2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000;
 }
 
 .chat {
@@ -77,6 +79,10 @@
   padding: 12px 0;
   text-decoration: none;
   display: block;
+}
+
+.dropdown-content small {
+  color: black;
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1}
