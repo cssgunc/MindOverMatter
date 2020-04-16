@@ -29,5 +29,6 @@ import test
 import help
 import database
 import resources
+import aboutus
 
 app.run(debug=True)
