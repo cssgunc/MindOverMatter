@@ -53,8 +53,9 @@
                     </div>
                     <div id="callDropdown" class="dropdown-content">
                             {% for help in call_list %}
-                                <a href="{{ help.link }}">{{ help.title }}</a>
-                                <small>{{help.description}}</small>
+                                <a href="{{ help.link }}">{{ help.title }}
+                                    <br>
+                                <small>{{help.description}}</small></a>
                             {% endfor %}
                             <br> <br>
                     </div>
@@ -68,8 +69,9 @@
                     </div>
                     <div id="WebsiteDropdown" class="dropdown-content">
                         {% for help in website_list %}
-                            <a href="{{ help.link }}">{{ help.title }}</a>
-                            <small>{{help.description}}</small>
+                            <a href="{{ help.link }}">{{ help.title }}
+                                <br>
+                            <small>{{help.description}}</small></a>
                         {% endfor %}
                         <br> <br>
 
