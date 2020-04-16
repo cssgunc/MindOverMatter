@@ -38,7 +38,7 @@
                     <div id="ChatDropdown" class="dropdown-content">
                         {% for help in chat_list %}
                             <a href="{{ help.link }}">{{ help.title }}</a>
-                            <small>{{help.description}}</small>
+                            <small style = "color: #203344">{{help.description}}</small>
                         {% endfor %}
                     
                         <br><br>
@@ -55,7 +55,7 @@
                     <div id="callDropdown" class="dropdown-content">
                             {% for help in call_list %}
                                 <a href="{{ help.link }}">{{ help.title }}</a>
-                                <small>{{help.description}}</small>
+                                <small style = "color: #203344">{{help.description}}</small>
                             {% endfor %}
                             <br> <br>
                     </div>
@@ -71,7 +71,7 @@
                     <div id="WebsiteDropdown" class="dropdown-content">
                         {% for help in website_list %}
                             <a href="{{ help.link }}">{{ help.title }}</a>
-                            <small>{{help.description}}</small>
+                            <small style = "color: #203344">{{help.description}}</small>
                         {% endfor %}
                         <br> <br>
 
