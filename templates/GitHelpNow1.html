@@ -31,14 +31,14 @@
         <div class="grid">
             <div class="chat">
                 <div class="dropdown">
-                    <div class="container" Style = "color: white; text-shadow:
-                    -2px -2px 0 #000, 2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000;  " >
+                    <div class="container" >
                         <i class="fas fa-comment fa-6x" onclick="ChatFunction()" class="dropbtn" alt="chat"> </i>
                     </div>
                     <div id="ChatDropdown" class="dropdown-content">
                         {% for help in chat_list %}
-                            <a href="{{ help.link }}">{{ help.title }}</a>
-                            <small>{{help.description}}</small>
+                            <a href="{{ help.link }}">{{ help.title }}
+                                <br>
+                            <small>{{help.description}}</small></a>
                         {% endfor %}
                     
                         <br><br>
@@ -47,8 +47,7 @@
             </div>
             <div class="call">
                 <div class="dropdown">
-                    <div class="container" Style = "color: white; text-shadow:
-                    -2px -2px 0 #000, 2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000; ">
+                    <div class="container">
                         <i class="fas fa-phone-volume fa-5x" onclick="CallFunction()" class="dropbtn" class="fas fa-phone-square-alt" alt="chat"
                             width="340"> </i>
                     </div>
@@ -63,8 +62,7 @@
             </div>
             <div class="website">
                 <div class="dropdown">
-                    <div class="container" Style = "color: white; text-shadow:
-                    -2px -2px 0 #000, 2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000; ">
+                    <div class="container">
                         <i class="fas fa-hand-holding-medical fa-5x" onclick="WebsiteFunction()" class="dropbtn"  alt="chat"
                              width="340"> </i>
                     </div>
