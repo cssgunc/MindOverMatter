@@ -12,9 +12,9 @@
     <div class="menu-container">
       <div class="title">
         <h2>Resources</h2>
-        <body>Insert an introductory message here. Explain stuff and abcdefg and add some encouraging
-          and wholesome message.
+        <body>A complete list of mental health resources that UNC provides.
         </body>
+        <br>
         <br>
         <input type="text" placeholder="Search...">
       </div>
@@ -22,7 +22,10 @@
         {% for Resource in ResourcesList %}
         <h3><a href="{{ loop.index }}" target="_blank">{{ Resource.title }}</a></h3>
         <dd>{{ Resource.description }}
-        </dd>
+        </dd> 
+        <br>
+        <br>
+        <!-- add space -->
         {% endfor %}
       </div>
     </div>

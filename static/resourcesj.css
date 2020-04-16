@@ -2,27 +2,18 @@
 
   /* Resource list: Resource titles */
   h1 {
-    font-size: 300%;
+    font-size: 350%;
     font-family: Lato;
     color: black;
     text-align: left;
   }
 
-  /* Resource list: description */
+  /* Resource list: body */
   h2 {
     text-align: left;
     font-family: Lato;
-    font-size: 100%;
-  }
-  h3 {
-    text-align: left;
-    font-family: Lato;
-    font-size: 100%;
-  }
-  h4 {
-    text-align: left;
-    font-family: Lato;
-    font-size: 100%;
+    font-size: 125%;
+    font-weight: normal;
   }
 
   /* Color of hyperlinks */
@@ -40,5 +31,7 @@
     background-color: white;
     border: 50px solid #65a4d8;
     padding: 5%;
-    margin: 10%;
+    /* margin: 10%; */
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
