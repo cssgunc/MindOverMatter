@@ -107,11 +107,12 @@
 }
 
 
+
 @media only screen 
   and (max-device-width: 1350px) {
     .title{
       display: flex;
-      width:400px;
+      width:350px;
       justify-content: center;
       align-items: center;
       position: relative;
@@ -126,7 +127,7 @@
       justify-content: space-around;
   }
   .container {
-      width: 300px;
+      width: 290px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -171,7 +172,7 @@
     position: sticky;
     margin: 0 auto;
     background-color:white;
-    width: 270px;
+    width: 250px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-top-color: transparent;
@@ -200,8 +201,12 @@
   
   .show {display:block;}
   }
+  .chat_title{
+    display:none;
+  }
+  
 
-  @media only screen 
+  /* @media only screen 
   and (max-width: 1320px) {
 
     .title{
@@ -223,17 +228,18 @@
       position: relative;
   }
   .container {
-      width: 300px;
+      width: 305px;
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      border-top-color: black;
+      /* border-top-color: black;
       border-left-color: black;
       border-right-color: black;
       border-bottom-color: black;
       border-width: .1em;
-      border-style: solid;
-      height: 200px;
+      border-style: solid; */
+      /* height: 200px;
       background: #64a3d9;
       border-radius: 10px;;
       margin: 0 auto;
@@ -284,8 +290,8 @@
     border-radius: 10px;
     padding-left: 16px;
     padding-right: 16px;
-  } 
-  
+  }  */
+/*   
   .dropdown-content a {
     color: #64a3d9;
     padding: 12px 0;
@@ -296,4 +302,10 @@
   .dropdown-content a:hover {background-color: #f1f1f1}
   
   .show {display:block;}
-  }
+  } */
+
+  
+
+
+
+
