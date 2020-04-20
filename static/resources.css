@@ -49,13 +49,13 @@
 
   /* Color of hyperlinks */
   a {
-    color: #13294B;
+    color: black;
   }
   a:visited {
-    color: #65a4d8;
+    color: #78756e;
   }
   a:hover, a:active, a:focus {
-    color:rgb(211, 218, 230);
+    color: #99badd;
   }
 
   /* Scroll Bar Styling */
@@ -93,9 +93,5 @@
   dd {
     text-align: right;
     font-size: 100%;
-    margin-left: 50%;
-  }
-
-  /* "Wholesome message" under title */
-  body {
+    margin-left: 40%;
   }
