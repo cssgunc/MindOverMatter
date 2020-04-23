@@ -21,8 +21,12 @@
 .whywestarted{
     text-align: left;
     color: #203344;
-    font-size: 14pt;
+    font-size: 17pt;
 
+}
+
+.lesswide {
+    width: 1250px;
 }
 .title{font-size: 69px;}
 

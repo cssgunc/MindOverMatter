@@ -1,31 +1,9 @@
-<!DOCTYPE html>
 
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Homepage</title>
+    {% extends "base.html" %} {% block head %} 
+     <title>Homepage</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepagestyle.css') }}" />
-</head>
-
-<body>
-    <!-- <header>
-    <div class = "logocenter">
-        <img src="{{ url_for('static', filename='Logo_no_words.png') }}"   width="200" height="200" alt="Mind Over Matter"></img>
-        <h1>Put your mind first</h1>
-    </div>
-</header>
-    <div class = "nav">
-            <a href="default.asp">Home</a>
-            <a href="news.asp">Get Help Now</a>
-            <a href="contact.asp">Resources</a>
-            <a href="about.asp">Events</a>
-            <a href="about.asp">About</a>
-    </div> -->
-
-
-
-    {% extends "base.html" %} {% block body %}
+    {% endblock %}
+    {% block body %}
 
 
     <div class="together">
@@ -155,6 +133,3 @@
     </script>
 
     {% endblock %}
-</body>
-
-</html>
