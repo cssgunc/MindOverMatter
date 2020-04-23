@@ -305,7 +305,7 @@ and (max-device-width: 480px){
   }
 
 
-  /* @media only screen 
+  @media only screen 
   and (max-width: 950px){
 
     .title{
@@ -322,10 +322,12 @@ and (max-device-width: 480px){
     }
 
     .grid {
+      width: 100%;
       display: flex;
       justify-content: center;
       position: relative;
       flex-direction: column;
+      align-items: center;
   }
   .container {
       position: relative;
@@ -408,4 +410,4 @@ and (max-device-width: 480px){
 
 
 
- */
+
