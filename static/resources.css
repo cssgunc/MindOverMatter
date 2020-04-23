@@ -25,6 +25,8 @@
   .title {
     flex: 1 1 0;
     text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
     justify-content: center;
     color: #ffff;
     border: 1px solid white;  /* For debugging */
@@ -47,13 +49,13 @@
 
   /* Color of hyperlinks */
   a {
-    color: #13294B;
+    color: black;
   }
   a:visited {
-    color: #65a4d8;
+    color: #78756e;
   }
   a:hover, a:active, a:focus {
-    color:rgb(211, 218, 230);
+    color: #99badd;
   }
 
   /* Scroll Bar Styling */
@@ -78,6 +80,7 @@
     color: white;
     font-size: 400%;
     margin-top: 50%;
+    word-spacing: 30px;
   }
 
   /* Resource list: Resource titles */
@@ -90,5 +93,5 @@
   dd {
     text-align: right;
     font-size: 100%;
-    margin-left: 50%;
+    margin-left: 40%;
   }

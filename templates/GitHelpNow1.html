@@ -30,27 +30,26 @@
 
         <div class="grid">
             <div class="chat">
+                <div class = "chat_title">
+                        Chat Line
+                </div>
                 <div class="dropdown">
                     <div class="container" >
                         <i class="fas fa-comment fa-6x" onclick="ChatFunction()" class="dropbtn" alt="chat"> </i>
                     </div>
                     <div id="ChatDropdown" class="dropdown-content">
                         {% for help in chat_list %}
-<<<<<<< HEAD
-                            <a href="{{ help.link }}">{{ help.title }}</a>
-                            <small style = "color: #203344">{{help.description}}</small>
-=======
                             <a href="{{ help.link }}">{{ help.title }}
                                 <br>
                             <small>{{help.description}}</small></a>
->>>>>>> 1d708c05d4e4d83b80b2fdfa6dfd8d4cf90c745c
                         {% endfor %}
-                    
-                        <br><br>
                     </div>
                 </div>
             </div>
             <div class="call">
+                    <div class = "chat_title">
+                            Hotline
+                        </div>
                 <div class="dropdown">
                     <div class="container">
                         <i class="fas fa-phone-volume fa-5x" onclick="CallFunction()" class="dropbtn" class="fas fa-phone-square-alt" alt="chat"
@@ -58,26 +57,28 @@
                     </div>
                     <div id="callDropdown" class="dropdown-content">
                             {% for help in call_list %}
-                                <a href="{{ help.link }}">{{ help.title }}</a>
-                                <small style = "color: #203344">{{help.description}}</small>
+                                <a href="{{ help.link }}">{{ help.title }}
+                                    <br>
+                                <small>{{help.description}}</small></a>
                             {% endfor %}
-                            <br> <br>
                     </div>
                 </div>
             </div>
             <div class="website">
+                    <div class = "chat_title">
+                            Website
+                        </div>
                 <div class="dropdown">
                     <div class="container">
                         <i class="fas fa-hand-holding-medical fa-5x" onclick="WebsiteFunction()" class="dropbtn"  alt="chat"
                              width="340"> </i>
                     </div>
-                    <div id="WebsiteDropdown" class="dropdown-content">
+                    <div id="WebsiteDropdown" class="dropdown-content" >
                         {% for help in website_list %}
-                            <a href="{{ help.link }}">{{ help.title }}</a>
-                            <small style = "color: #203344">{{help.description}}</small>
+                            <a href="{{ help.link }}">{{ help.title }}
+                                <br>
+                            <small>{{help.description}}</small></a>
                         {% endfor %}
-                        <br> <br>
-
                     </div>
 
                 </div>
