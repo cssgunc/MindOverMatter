@@ -117,6 +117,7 @@ h3 {
   left: 0;
   bottom: 0;
   width: 100%;
+  font: 20px;
   color: white;
   background-color:#64a3d9;
   text-align: center;
@@ -265,3 +266,6 @@ h3 {
 
 }
 
+.contact{
+  font-size: 20px;
+}

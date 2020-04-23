@@ -7,6 +7,8 @@
     <title>Homepage</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepagestyle.css') }}" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4736927d08.js" crossorigin="anonymous"></script>
+
     {% block head %}
     {% endblock %}
 </head>
@@ -69,8 +71,8 @@
     <div class="footer" id="footer">
         {% block footer %}
 
-        <p class="contact">Email: uncmindovermatter@gmail.com |
-            Instagram: @uncmindabovematter</p>
+        <p class="contact"><i class="far fa-envelope"></i> :uncmindovermatter@gmail.com |
+            <i class="fab fa-instagram"></i>:  @uncmindabovematter</p>
         {% endblock %}
     </div>
 </body>
