@@ -1,4 +1,3 @@
-@media screen and (min-width: 500px){
 
 .grid {
     display: flex;
@@ -104,12 +103,12 @@
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-}
 
 
 
 @media only screen 
-  and (max-device-width: 1350px) {
+and (min-device-width: 320px) 
+and (max-device-width: 480px){
     .title{
       display: flex;
       width:350px;
@@ -206,8 +205,10 @@
   }
   
 
-  /* @media only screen 
-  and (max-width: 1320px) {
+
+
+  @media only screen 
+  and (min-width: 950px){
 
     .title{
       display: flex;
@@ -239,7 +240,7 @@
       border-bottom-color: black;
       border-width: .1em;
       border-style: solid; */
-      /* height: 200px;
+       height: 200px;
       background: #64a3d9;
       border-radius: 10px;;
       margin: 0 auto;
@@ -290,8 +291,107 @@
     border-radius: 10px;
     padding-left: 16px;
     padding-right: 16px;
-  }  */
-/*   
+  }  
+  .dropdown-content a {
+    color: #64a3d9;
+    padding: 12px 0;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .show {display:block;}
+  }
+
+
+  /* @media only screen 
+  and (max-width: 950px){
+
+    .title{
+      display: none;
+      width:400px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: bold;
+      color:#64a3d9;
+      font-size:50px;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      flex-direction: column;
+  }
+  .container {
+      position: relative;
+      width: 305px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      /* border-top-color: black;
+      border-left-color: black;
+      border-right-color: black;
+      border-bottom-color: black;
+      border-width: .1em;
+      border-style: solid; */
+       height: 200px;
+      background: #64a3d9;
+      border-radius: 10px;;
+      margin: 0 auto;
+  }
+  
+  .chat {
+      background-color: white;
+      display: flex;
+      padding: 20px 0;
+      text-align: center;
+      font-size: xx-large;
+  }
+  .call {
+      padding: 20px 0px;
+      background: white;
+      text-align: center;
+      font-size: xx-large;
+      display: flex;
+  }
+  .website {
+      background-color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: xx-large; 
+      display: flex;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    text-align: left;
+    font-size: x-large;
+    position: sticky;
+    margin: 0 auto;
+    background-color:white;
+    width: 270px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color:transparent;
+    border-bottom-color:transparent;
+    border-width: .1em;
+    border-style: solid;
+    border-radius: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }    
   .dropdown-content a {
     color: #64a3d9;
     padding: 12px 0;
