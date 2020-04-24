@@ -6,7 +6,7 @@
 .person{
     width: 30%;
     padding: 2%;
-    height: 400px;
+    height: 650px;
 }
 .peopleimages{
     width: 25%;
@@ -40,4 +40,9 @@
 
 p {
     font-size: 20px;
+}
+
+.peopleimages {
+    height: 250px;
+    width: 250px;
 }
