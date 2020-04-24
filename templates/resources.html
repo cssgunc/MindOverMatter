@@ -1,34 +1,34 @@
 {% extends "base.html" %} {% block body %}
 
-<link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <title>Some Web Page</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='resources.css') }}"/>
-  </head>
-    <div class="menu-container">
-      <div class="title">
-        <h2>Resources</h2>
-        <body>A complete list of mental health resources that UNC provides.
-        </body>
-        <br>
-        <br>
-        <input type="text" placeholder="Search...">
-      </div>
-      <div class = "text">
-        {% for Resource in ResourcesList %}
-        <h3><a href="{{ loop.index }}" target="_blank">{{ Resource.title }}</a></h3>
-        <dd>{{ Resource.description }}
-        </dd> 
-        <br>
-        <br>
-        {% endfor %}
-      </div>
+<head>
+  <title>Some Web Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='resources.css') }}" />
+</head>
+<div class="menu-container">
+  <div class="title">
+    <div class="left-title">
+      Resources
     </div>
-  </body>
-</html>
+    <body>A complete list of mental health resources that UNC provides.
+    </body>
+    <br>
+    <br>
+    <input type="text" placeholder="Search...">
+  </div>
+  <div class="text">
+    <div class="table">
+      {% for Resource in ResourcesList %}
+      <div class="flex-row">
+        <div class="flex-name">
+          <a href="/resources/{{ loop.index }}" target="_blank">{{ Resource.title }}</a>
+        </div>
+        <div class="flex-description">{{ Resource.description }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 
 {% endblock %}

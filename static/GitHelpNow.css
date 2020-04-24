@@ -166,23 +166,7 @@ and (max-device-width: 480px){
   }
 
   .dropdown-content {
-    text-align: left;
-    font-size: x-large;
-    position: sticky;
-    margin: 0 auto;
-    background-color:white;
     width: 250px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-color:transparent;
-    border-bottom-color:transparent;
-    border-width: .1em;
-    border-style: solid;
-    border-radius: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
   } 
   
   .dropdown-content a {
@@ -224,6 +208,7 @@ and (max-device-width: 480px){
     }
 
     .grid {
+      width: 100%;
       display: flex;
       justify-content: space-around;
       position: relative;
@@ -234,12 +219,6 @@ and (max-device-width: 480px){
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      /* border-top-color: black;
-      border-left-color: black;
-      border-right-color: black;
-      border-bottom-color: black;
-      border-width: .1em;
-      border-style: solid; */
        height: 200px;
       background: #64a3d9;
       border-radius: 10px;;
@@ -309,7 +288,7 @@ and (max-device-width: 480px){
   and (max-width: 950px){
 
     .title{
-      display: none;
+      display: flex;
       width:400px;
       justify-content: center;
       align-items: center;
