@@ -7,6 +7,7 @@
     <title>Homepage</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepagestyle.css') }}" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/4736927d08.js" crossorigin="anonymous"></script>
     <meta content="width=device-width, initial-scale=1" name="viewport" /> 
 
@@ -41,33 +42,77 @@
 
 
         </header>
-        <div class="nav" id ="navbar">
+        <div class="nav" id="navbar">
             <a href="default.asp">Home</a>
             <a href="news.asp">Get Help Now</a>
             <a href="contact.asp">Resources</a>
             <a href="about.asp">Events</a>
             <a href="about.asp">About</a>
         </div>
+
+
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav" id="topnav">
+            <a href="#home" class="active">Welcome</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="default.asp">Home</a>
+                <a href="news.asp">Get Help Now</a>
+                <a href="contact.asp">Resources</a>
+                <a href="about.asp">Events</a>
+                <a href="about.asp">About</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
         <script>
-            window.onscroll = function () { myFunction() };
+            if (window.screen.width > 599) {
+                window.onscroll = function () { myFunction() };
 
-            var navbar = document.getElementById("navbar");
-            // var divRelative = document.getElementsByClassName("together");
-            var sticky = navbar.offsetTop;
+                var navbar = document.getElementById("navbar");
+                var sticky = navbar.offsetTop;
 
-            function myFunction() {
-                if (window.pageYOffset >= sticky) {
-                    navbar.classList.add("sticky")
-                    // divRelative.classList.add("together")
+                function myFunction() {
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky");
 
-                } else {
-                    navbar.classList.remove("sticky");
-                    // divRelative.classList.remove("together")
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+
                 }
+            } else {
+                window.onscroll = function () { myFunction1() };
+
+                var navbar = document.getElementById("topnav");
+                var sticky = navbar.offsetTop;
+
+                function myFunction1() {
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky");
+
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+
+                }
+
             }
+
         </script>
+        <script>function hamburger() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }</script>
         {% endblock %}
-     </div> 
+    </div>
     {% block body %}{% endblock %}
     <div class="footer" id="footer">
         {% block footer %}
