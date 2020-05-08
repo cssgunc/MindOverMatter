@@ -12,5 +12,10 @@
 <body>
     <p>This is the calendar!</p>
     <iframe src="https://calendar.google.com/calendar/embed?src=uncmindovermatter%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+    <script>
+        var title = document.getElementById("calendar");
+        title.classList.add("current");
+    </script>
 </body>
 { % endblock % }

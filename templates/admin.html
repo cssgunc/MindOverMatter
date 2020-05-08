@@ -1,37 +1,71 @@
 {% extends "base.html" %} {% block body %}
 
-<link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
 <!DOCTYPE html>
 <html lang='en'>
-    <head>
-        <title>Admin Page</title>
-    </head>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
 
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
+<head>
+    <title>Admin Page</title>
+</head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
 
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-    </style>
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
 
-    <body>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Contact Information</th>
-                <th>Delete?</th>
-            </tr>
-        </table>
-    </body>
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+    <table id="data">
+        <tr>
+            <th>Link</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Email</th>
+            <th>Other</th>
+            <th>Select</th>
+        </tr>
+        <script>
+            var table = document.getElementById("data");
+
+
+            var y = 0;
+            // for (y = 0; y < )
+            var row = table.insertRow();
+            var i;
+            for (i = 0; i < 5; i++) {
+                var cell = row.insertCell(i);
+                cell.innerHTML = "hi";
+            }
+
+            var cell = row.insertCell(5);
+
+            var check = document.createElement('input');
+            var label = document.createElement('label');
+
+            check.setAttribute('type', 'checkbox');
+            check.setAttribute('value', 'yes');
+    
+            label.appendChild(document.createTextNode(' '));
+
+            cell.appendChild(check);
+            cell.appendChild(label);
+
+
+
+        </script>
+    </table>
+</body>
+{% endblock %}

@@ -4,7 +4,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepagestyle.css') }}" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -43,11 +42,11 @@
 
         </header>
         <div class="nav" id="navbar">
-            <a href="default.asp">Home</a>
-            <a href="news.asp">Get Help Now</a>
-            <a href="contact.asp">Resources</a>
-            <a href="about.asp">Events</a>
-            <a href="about.asp">About</a>
+            <a id="homepage" href="/homepage/">Home</a>
+            <a id="help" href="/help/">Get Help Now</a>
+            <a id="resources" href="/resources/">Resources</a>
+            <a id="calendar" href="/calendar/">Events</a>
+            <a id="aboutus" href="/aboutus/">About</a>
         </div>
 
 
@@ -57,11 +56,11 @@
             <a href="#home" class="active">Welcome</a>
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
-                <a href="default.asp">Home</a>
-                <a href="news.asp">Get Help Now</a>
-                <a href="contact.asp">Resources</a>
-                <a href="about.asp">Events</a>
-                <a href="about.asp">About</a>
+                <a href="/homepage/">Home</a>
+                <a href="/help">Get Help Now</a>
+                <a href="/resources/">Resources</a>
+                <a href="/calendar/">Events</a>
+                <a href="/aboutus/">About</a>
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="hamburger()">
@@ -111,6 +110,7 @@
                     x.style.display = "block";
                 }
             }</script>
+
         {% endblock %}
     </div>
     {% block body %}{% endblock %}

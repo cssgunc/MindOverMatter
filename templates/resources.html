@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
 <head>
-  <title>Some Web Page</title>
+  <title>Resources</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='resources.css') }}" />
 </head>
 <div class="menu-container">
@@ -12,6 +12,11 @@
       Resources
     </div>
     <body>A complete list of mental health resources that UNC provides.
+
+      <script>
+        var title = document.getElementById("resources");
+        title.classList.add("current");
+    </script>
     </body>
     <br>
     <br>

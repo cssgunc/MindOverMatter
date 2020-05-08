@@ -7,6 +7,6 @@ from database import db, Post
 def resourceRoute(resource):
     return render_template('resourcesj.html', resource=Post.query.get(resource))
 
-@app.route('/resources')
+@app.route('/resources/')
 def resources():
     return render_template('resources.html', ResourcesList=Post.query.all())

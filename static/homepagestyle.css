@@ -274,6 +274,10 @@ h3 {
   display: none;
 }
 
+.current {
+  background-color: #49779E !important;
+}
+
 @media only screen and (max-width: 600px) { 
   .nav a {
     display: none;

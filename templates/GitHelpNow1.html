@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <title>
-    Mind/Matter - GitHelpNow
+    Get Help Now
 </title>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='GitHelpNow.css') }}">
 <link rel='stylesheet' href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css')}}">
@@ -79,6 +79,10 @@
         </div>
 
     </div>
+    <script>
+        var title = document.getElementById("help");
+        title.classList.add("current");
+    </script>
 </html>
 
 {% endblock %}

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>About Us</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='aboutus.css') }}" />
 </head>
 
@@ -102,7 +102,10 @@
         <h3>For immediate help, see the <em>Get Help Now</em>&nbsp; tab up above.</h3>
         <h3 class="spacing">In an emergency, please call 911.</h3>
     </div>
-
+    <script>
+        var title = document.getElementById("aboutus");
+        title.classList.add("current");
+    </script>
 
 
 

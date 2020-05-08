@@ -49,8 +49,8 @@ p {
 
 @media only screen and (max-width: 600px) { 
     .person {
-        max-width: 539 !important;
-        width: 70%;
+        max-width: 599px !important;
+        width: 100%;
         margin: 0px !important;
     
     }
@@ -68,12 +68,16 @@ p {
     .gallery {
         display: inline-block;
         align-items: none;
-        width: 100vw;
+        width: 90vw;
     
     }
 
     .lesswide {
-        width: 450px;
+        width: 500px;
+    }
+
+    .whywestarted {
+        font-size: 20px;
     }
 
     .right.blue {

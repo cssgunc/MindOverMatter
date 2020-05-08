@@ -28,6 +28,6 @@ website_list = [
     Resource("https://mentalhealth.gov", "MentalHealth.GOV", "National mental health information and education")
 ]
 
-@app.route('/help')
+@app.route('/help/')
 def get_help():
     return render_template('GitHelpNow1.html', chat_list=chat_list, call_list = call_list, website_list = website_list)
