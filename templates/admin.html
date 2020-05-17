@@ -9,63 +9,209 @@
     <title>Admin Page</title>
 </head>
 <style>
+    body {
+        height: 100vh;
+    }
+
     table {
-        font-family: arial, sans-serif;
         border-collapse: collapse;
-        width: 100%;
+        width: 90%;
+    }
+
+    #tablestyle {
+        padding-left: 15px;
     }
 
     td,
     th {
-        border: 1px solid #dddddd;
+        border: 1px solid #203344;
+        ;
         text-align: left;
         padding: 8px;
+        color: #203344;
     }
 
     tr:nth-child(even) {
         background-color: #dddddd;
     }
+
+    #addresource {
+        display: inline-block;
+        margin: auto;
+        padding: 15px;
+        font-size: 15pt;
+        text-align: center;
+    }
+
+    #addtitle {
+        font-size: 20pt;
+        line-height: auto;
+        margin: auto;
+        float: none;
+        padding: 15px;
+        color: #203344;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #linkcolor:link {
+        color: #203344 !important;
+    }
+
+    #linkcolor:visited {
+        color: #203344 !important;
+    }
+
+    #linkcolor:active {
+        color: #203344 !important;
+    }
+
+    input {
+        margin-right: 15px;
+    }
+
+    #separate {
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+    #middle {
+        text-align: center;
+    }
+
+    #textarea {
+        display: inline-block;
+        padding-top: 10px;
+    }
+
+    #textareaedit {
+        display: inline-block;
+        padding-top: 10px;
+    }
+
+    #submit {
+        width: 100px;
+        height: 30px;
+    }
+
+    #edit {
+        display: none;
+    }
 </style>
 
 <body>
-    <table id="data">
-        <tr>
-            <th>Link</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Email</th>
-            <th>Other</th>
-            <th>Select</th>
-        </tr>
+    <p id="addtitle"> Add a Resource</p>
+    <div id="middle">
+        <div id="addresource">
+            <form method="POST">
+                <div id="separate">
+                    Link:
+                    <input  name="link" type="text" />
+
+                    Title:
+                    <input name="title" type="text" />
+
+                    Email:
+                    <input name="email" type="text" />
+
+                    Other:
+                    <input name="other" type="text" />
+                </div>
+
+
+                <div id="desc">Description:</br></br><textarea id="textarea" name="description" cols="100"
+                        rows="15"></textarea></div>
+                <input id="submit" name="Submit" type="submit" />
+            </form>
+
+        </div>
+    </div>
+    <p id="addtitle"> Resources</p>
+    <div id="tablestyle">
+        <table id="data">
+            <tr>
+                <th>ID</th>
+                <th>Link</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Email</th>
+                <th>Other</th>
+                <th>Delete</th>
+                <th>Edit</th>
+
+            </tr>
+
+            {% for post in info %}
+            <tr>
+                <td id="{{ post.id }}id">{{ post.id }}</td>
+                <td id="{{ post.id }}link">{{ post.link }}</td>
+                <td id="{{ post.id }}title"> {{ post.title }}</td>
+                <td id="{{ post.id }}description">{{ post.description }}</td>
+                <td id="{{ post.id }}email">{{ post.email }}</td>
+                <td id="{{ post.id }}other">{{ post.other }}</td>
+                <td><a id="linkcolor" href="/deletepost/{{ post.id }}">Delete</a></td>
+                <td><button id="{{ post.id }}button" onclick="edit({{ post.id }})">Edit</button></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <div id="edit">
+            <p id="addtitle"> Edit a Resource</p>
+            <div id="middle">
+                <div id="addresource">
+                    <form action="/editresource" method="POST">
+                        <div id="separate">
+                            Link:
+                            <input id="linkedit" name="linkedit" type="text" />
+
+                            Title:
+                            <input id="titleedit" name="titleedit" type="text" />
+
+                            Email:
+                            <input id="emailedit" name="emailedit" type="text" />
+
+                            Other:
+                            <input id="otheredit"name="otheredit" type="text" />
+                        </div>
+
+
+                        <div id="desc">Description:</br></br><textarea id="textareaedit" name="description" cols="100"
+                                rows="15"></textarea></div>
+                        <input id="submit" name="Submit" type="submit" onclick="vanish()"/>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
         <script>
-            var table = document.getElementById("data");
+            function edit(id) {
+                var x = document.getElementById("edit");
+                    x.style.display = "block";
+                var link = document.getElementById(id+"link");
+                console.log(link.value);
+                var title = document.getElementById(id+"title");
+                var email = document.getElementById(id+"email");
+                var other = document.getElementById(id+"other");
+                var description = document.getElementById(id+"description");
 
+                var linkedit = document.getElementById("linkedit").value = link.innerText;
+                var titleedit = document.getElementById("titleedit").value = title.innerText;
+                var emailedit = document.getElementById("emailedit").value = email.innerText
+                var otheredit = document.getElementById("otheredit").value = other.innerText;
+                var descriptionedit = document.getElementById("textareaedit").innerText = description.innerText;
+                
 
-            var y = 0;
-            // for (y = 0; y < )
-            var row = table.insertRow();
-            var i;
-            for (i = 0; i < 5; i++) {
-                var cell = row.insertCell(i);
-                cell.innerHTML = "hi";
+                }
+
+            function vanish() {
+                var x = document.getElementById("edit");
+                x.style.display = "none";
             }
-
-            var cell = row.insertCell(5);
-
-            var check = document.createElement('input');
-            var label = document.createElement('label');
-
-            check.setAttribute('type', 'checkbox');
-            check.setAttribute('value', 'yes');
-    
-            label.appendChild(document.createTextNode(' '));
-
-            cell.appendChild(check);
-            cell.appendChild(label);
-
-
-
         </script>
-    </table>
+
 </body>
 {% endblock %}

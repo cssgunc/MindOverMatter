@@ -16,18 +16,24 @@ class Post(db.Model):
     def __repr__(self):
         return '<Post %r>' % self.link
 
-@app.route("/addresource", methods=['GET', 'POST'])
-def add_post():
-    if request.method == "POST":
-        post = Post(link=request.form["link"],title=request.form['title'],description=request.form['description'],email=request.form['email'],other=request.form['other'])
-        db.session.add(post)
-        db.session.commit()
+# @app.route("/addresource", methods=['GET', 'POST'])
+# def add_post():
+#     if request.method == "POST":
+#         post = Post(link=request.form["link"],title=request.form['title'],description=request.form['description'],email=request.form['email'],other=request.form['other'])
+#         db.session.add(post)
+#         db.session.commit()
 
-    return render_template("addpost.html")
+#     return redirect(url_for("admin"))
 
-@app.route("/editresource", methods=['GET', 'POST'])
+@app.route("/editresource", methods=['POST'])
 def edit_post():
-    return
+    postid = Post.query.get(Post.id)
+    postid.link = request.form['linkedit']
+    postid.title = request.form['titleedit']
+    postid.description = request.form['textareaedit']
+    postid.other = request.form['otheredit']
+
+    return redirect(url_for("admin"))
 
 @app.route("/deletepost/<int:postid>")
 def delete_post(postid):
@@ -36,8 +42,20 @@ def delete_post(postid):
         db.session.delete(post)
         db.session.commit()
 
-    return redirect(url_for("hello_world"))
+    return redirect(url_for("admin"))
 
+@app.route("/getinfo")
+def get_info():
+    return Post.query.all()
+
+@app.route('/admin/', methods=['GET', 'POST'])
+def admin():
+    if request.method == "POST":
+        post = Post(link=request.form["link"],title=request.form['title'],description=request.form['description'],email=request.form['email'],other=request.form['other'])
+        db.session.add(post)
+        db.session.commit()
+
+    return render_template('admin.html', info = get_info())
 
 @app.route("/createdb")
 def create_db():
