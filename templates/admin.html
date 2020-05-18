@@ -162,7 +162,7 @@
             <p id="addtitle"> Edit a Resource</p>
             <div id="middle">
                 <div id="addresource">
-                    <form action="/editresource" method="POST">
+                    <form id="actionchange" action="/editresource/" method="POST">
                         <div id="separate">
                             Link:
                             <input id="linkedit" name="linkedit" type="text" />
@@ -178,9 +178,11 @@
                         </div>
 
 
-                        <div id="desc">Description:</br></br><textarea id="textareaedit" name="description" cols="100"
+                        <div id="desc">Description:</br></br><textarea id="textareaedit" name="textareaedit" cols="100"
                                 rows="15"></textarea></div>
                         <input id="submit" name="Submit" type="submit" onclick="vanish()"/>
+
+                        <!-- <p id="invisible"></p> -->
                     </form>
 
                 </div>
@@ -203,13 +205,17 @@
                 var emailedit = document.getElementById("emailedit").value = email.innerText
                 var otheredit = document.getElementById("otheredit").value = other.innerText;
                 var descriptionedit = document.getElementById("textareaedit").innerText = description.innerText;
-                
+                var action = "/editresource/"
+                var edit = document.getElementById("actionchange").action = action + id;
+                console.log(edit);
 
                 }
 
             function vanish() {
                 var x = document.getElementById("edit");
                 x.style.display = "none";
+
+                
             }
         </script>
 

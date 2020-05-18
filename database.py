@@ -25,13 +25,15 @@ class Post(db.Model):
 
 #     return redirect(url_for("admin"))
 
-@app.route("/editresource", methods=['POST'])
-def edit_post():
-    postid = Post.query.get(Post.id)
+@app.route("/editresource/<int:id>", methods=['POST'])
+def edit_post(id):
+    postid = Post.query.get(id)
     postid.link = request.form['linkedit']
     postid.title = request.form['titleedit']
     postid.description = request.form['textareaedit']
+    postid.email = request.form['emailedit']
     postid.other = request.form['otheredit']
+    db.session.commit()
 
     return redirect(url_for("admin"))
 
