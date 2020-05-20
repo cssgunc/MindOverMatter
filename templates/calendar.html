@@ -10,9 +10,11 @@
     {% extends "base.html" %} {% block body %}
     <div class="right blue, change" style="height:auto">
         <h2 class="flexBoxH2">Calendar</h2>
-        <iframe id="cal"
+        <div class="cal">
+        <iframe
             src="https://calendar.google.com/calendar/embed?src=uncmindovermatter%40gmail.com&ctz=America%2FNew_York"
-            style="border: 0" frameborder="0" scrolling="no" height="700" width="1000"></iframe>
+            style="border: 0" frameborder="0" scrolling="no" height="700" width="100%"></iframe>
+        </div>
     </div>
     <script>
         var title = document.getElementById("calendar");
