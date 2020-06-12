@@ -18,10 +18,12 @@
     <div id="content">
         {% block content %}
         <header>
-            <div class="logocenter">
+            <div class="logoCenter">
+                <div class="mamlogo">
                 <img src="{{ url_for('static', filename='newLogo.png') }}" width="200" height="200"
-                    alt="Mind Over Matter" class="logoImg"></img>
-                <h1>Put your mind first</h1>
+                    alt="Mind Over Matter" class="logoImg"></img></div>
+                <div class="logo">
+                <h1>Put your mind first</h1></div>
 
             </div>
             <!-- <script>
@@ -45,7 +47,7 @@
             <a id="homepage" href="/homepage/">Home</a>
             <a id="help" href="/help/">Get Help Now</a>
             <a id="resources" href="/resources/">Resources</a>
-            <a id="calendar" href="/calendar/">Events</a>
+            <a id="calendar" href="/calendar/">Calendar</a>
             <a id="aboutus" href="/aboutus/">About</a>
         </div>
 
@@ -59,7 +61,7 @@
                 <a href="/homepage/">Home</a>
                 <a href="/help">Get Help Now</a>
                 <a href="/resources/">Resources</a>
-                <a href="/calendar/">Events</a>
+                <a href="/calendar/">Calendar</a>
                 <a href="/aboutus/">About</a>
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
@@ -117,8 +119,15 @@
     <div class="footer" id="footer">
         {% block footer %}
 
-        <p class="contact"><i class="far fa-envelope"></i> &nbsp;uncmindovermatter@gmail.com &nbsp;|&nbsp;
-            <i class="fab fa-instagram"></i> &nbsp;@uncmindabovematter</p>
+        <p class="contact noTextDecor"><a class="noLinkColor" href="malito:uncmindabovematter@gmail.com"><i
+                    class="far fa-envelope"></i></a>
+            &nbsp;|&nbsp; <a class="noLinkColor" href="https://www.instagram.com/uncmindabovematter/"><i
+                    class="fab fa-instagram"></i></a>
+            &nbsp;@uncmindabovematter &nbsp;|&nbsp; <a class="noLinkColor"
+                href="https://www.linkedin.com/company/mind-above-matter/"><i class="fab fa-linkedin"></i></a>
+
+
+        </p>
         {% endblock %}
     </div>
 </body>
