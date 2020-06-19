@@ -107,3 +107,17 @@
     margin-top: 50%;
     word-spacing: 30px;
   }
+
+
+  @media only screen and (max-width: 600px) { 
+    .left-title {
+      font-size: 20pt;
+    }
+  }
+
+  @media only screen and (max-width: 400px) { 
+    .left-title {
+      font-size: 15pt;
+    }
+
+  }

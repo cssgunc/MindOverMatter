@@ -14,8 +14,8 @@
        url('playlist_caps-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
+
 body::before {
   content: "";
   position: fixed;
@@ -32,7 +32,6 @@ body {
   margin: 0px;
   font-family: 'Lato', sans-serif;
 }
-
 
 header {
   width: 100%;
@@ -359,53 +358,121 @@ i {
 
 h1 {
   margin: 0px;
-  font-size: 30pt !important;
-  line-height: 170px;
+  font-size: 25pt !important;
   height: auto;
-  width: 100px; 
+  line-height: 3em;
+  width: 90%; 
   float: none;
-  padding-left: 60px;
 
 }
+
+.mamlogo {
+  padding: 0px;
+  height: 100px;
+}
+
 .logoCenter {
   display: flex;
-  font-size: 20pt;
-  justify-content: space-evenly;
+  /* font-size: 20pt; */
+  justify-content: space-between;
+  padding: 0px;
+  margin: 6%;
 
 }
     /* line-height: auto; */
   /* justify-content: space-evenly; */
 
+.logo {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  text-align:center;
+  height: 100px;
+  padding: 0px;
+}
+
 .logoImg {
   width: 100px;
   height: 100px;
-  padding-top: 20px;
-  line-height: 170px;
 }
 .together {
-  height: 500px;
-  width: 600px;
+  height: 60vh;
+  width: 100vw;
 }
 
 #typewriter {
-  font-size: 20pt;
-  transform: translate(65pt, 137pt);
+  font-size: 15pt;
+  transform: translate(70pt, 117pt);
 }
 
 .mam {
-  font-size: 35pt;
-  transform: translate(65pt, 80pt);
+  font-size: 25pt;
+  transform: translate(70pt, 80pt);
 }
 
 .flexBoxP {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .right {
-  height: 700px;
+  height: 750px;
 }
 
+
 .flexBoxUL {
-  font-size: 20px;
+  font-size: 15px;
 }
+}
+
+@media only screen and (max-width: 400px) { 
+  #typewriter {
+    font-size:10pt;
+    transform: translate(70pt, 107pt);
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+  
+  .mam {
+    font-size: 20pt;
+    transform: translate(70pt, 80pt);
+  }
+  
+  .flexBoxP {
+    font-size: 15px;
+  }
+  
+  .right {
+    height: 700px;
+  }
+  
+  .flexBoxH2 {
+    font-size: 50px;
+  }
+  
+  .flexBoxUL {
+    font-size: 20px;
+  }
+
+  h1 {
+    margin: 0px;
+    font-size: 20pt !important;
+    height: auto;
+    line-height: 4em;
+    width: 90%; 
+    float: none;
+  
+  }
+
+  .logoCenter {
+    display: flex;
+    /* font-size: 20pt; */
+    justify-content: space-between;
+    padding: 0px;
+    margin: 6%;
+    margin-left: 4%;
+    margin-right: 4%;
+  
+  }
 }
