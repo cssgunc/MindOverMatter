@@ -20,9 +20,9 @@
     </body>
     <br>
     <br>
-    <input type="text" placeholder="Search...">
+    <input id="searchField" type="text" placeholder="Search...">
     <!-- <input id="submit" name="Submit" type="submit" /> -->
-    <button type="button" onclick="search()">Submit</button>
+    <button type="button" onclick="searchInput()">Submit</button>
   </div>
   <div class="text">
     <div class="table">
@@ -39,7 +39,13 @@
 </div>
 
 <script>
-  function search() {
+  function searchInput() {
+      search=document.getElementById("searchField").value
+      if (location.href.includes("search")){
+        location.replace(search)
+      } else {
+        location.replace("search/" + search)
+      }
       
   }
 </script>

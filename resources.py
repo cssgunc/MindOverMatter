@@ -18,10 +18,8 @@ def resourceSearch(searchField):
     searchedList = list()
     for post in Post.query.all():
         currentPost = re.findall(searchField, post.title + post.description)
-        print(currentPost)
         if currentPost != []:
             searchedList.append(post)
-        print(searchedList)
     
     return render_template('resources.html', ResourcesList=searchedList)
 
