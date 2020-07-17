@@ -17,7 +17,7 @@
   }
 
   /* Color of hyperlinks */
-  a {
+  /* a {
     color: #13294B;
   }
   a:visited {
@@ -25,7 +25,7 @@
   }
   a:hover, a:active, a:focus {
     color:rgb(211, 218, 230);
-  }
+  } */
 
   .box {
     background-color: white;

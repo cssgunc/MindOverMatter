@@ -42,7 +42,7 @@ header {
 }
 
 .left {
-  height: 600px;
+  height: auto;
   width: 90%;
   text-align: center;
   margin: auto;
@@ -89,6 +89,9 @@ h1{
   height: 100px;
   font-size: 85pt;
   color: #203344;
+  margin-block-start: .67em;
+  margin-block-end: .67em;
+  
 }
  /* text-align: center; */
   /* margin-right: 17%;
@@ -146,7 +149,6 @@ h3 {
 .right {
   /* height: 600px; */
   width: 90%;
-  height: 600px;
   text-align: center;
   margin: auto;
   /* outline: 4px solid white;
@@ -414,10 +416,12 @@ h1 {
   font-size: 15px;
 }
 
-.right {
-  height: 750px;
-}
 
+.calendarDiv{
+  height: 800px;
+  width: 600px;
+  
+}
 
 .flexBoxUL {
   font-size: 15px;
@@ -443,9 +447,7 @@ h1 {
     font-size: 15px;
   }
   
-  .right {
-    height: 700px;
-  }
+ 
   
   .flexBoxH2 {
     font-size: 50px;

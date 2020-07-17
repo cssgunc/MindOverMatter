@@ -1,6 +1,5 @@
 .gallery {
     display: flex;
-    align-items: center;
 }
 
 .person{
@@ -46,7 +45,11 @@ p {
     height: 250px;
     width: 250px;
 }
-
+.ourVenture{
+    color: #203344;
+    text-align: left;
+    font-size: 20px;
+}
 li{
     margin: 10px 0;
   }
