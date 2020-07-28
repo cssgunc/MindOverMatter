@@ -7,11 +7,11 @@ db = SQLAlchemy(app)
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    link = db.Column(db.String(80), unique=True, nullable=False)
-    title = db.Column(db.String, unique=True, nullable=False)
-    description = db.Column(db.String, unique=True, nullable=False)
-    email = db.Column(db.String, unique=True, nullable=False)
-    other = db.Column(db.String, unique=True, nullable=False)
+    link = db.Column(db.String(80), unique=False, nullable=True)
+    title = db.Column(db.String, unique=False, nullable=True)
+    description = db.Column(db.Text, unique=False, nullable=True)
+    email = db.Column(db.String, unique=False, nullable=True)
+    other = db.Column(db.String, unique=False, nullable=True)
 
     def __repr__(self):
         return '<Post %r>' % self.link

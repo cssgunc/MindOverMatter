@@ -85,11 +85,13 @@
     #textarea {
         display: inline-block;
         padding-top: 10px;
+        white-space: pre-wrap;
     }
 
     #textareaedit {
         display: inline-block;
         padding-top: 10px;
+        white-space: pre-wrap;
     }
 
     #submit {
@@ -100,6 +102,12 @@
     #edit {
         display: none;
     }
+
+    #desc {
+        white-space: pre-wrap;
+    }
+
+
 </style>
 
 <body>
@@ -109,22 +117,20 @@
             <form method="POST">
                 <div id="separate">
                     Link:
-                    <input  name="link" type="text" />
+                    <input name="link" type="text"/>
 
                     Title:
-                    <input name="title" type="text" />
+                    <input name="title" type="text"/>
 
                     Email:
-                    <input name="email" type="text" />
+                    <input name="email" type="text"/>
 
                     Other:
-                    <input name="other" type="text" />
+                    <input name="other" type="text"/>
                 </div>
 
-
-                <div id="desc">Description:</br></br><textarea id="textarea" name="description" cols="100"
-                        rows="15"></textarea></div>
-                <input id="submit" name="Submit" type="submit" />
+                <div id="desc">Description:</br></br><textarea id="textarea" name="description" cols="100" rows="15"></textarea></div>
+                <input id="submit" name="Submit" type="submit"/>
                 
             </form>
 
@@ -178,8 +184,9 @@
                             <input id="otheredit"name="otheredit" type="text" />
                         </div>
 
-
-                        <div id="desc">Description:</br></br><textarea id="textareaedit" name="textareaedit" cols="100"
+                        <!-- <textarea id="textareaedit" name="textareaedt" cols="100" rows="15" style='display:none' id='foo'></textarea>
+                        <div id='htmlsource' contenteditable></div> -->
+                        <div id="desc">Description:</br></br> <textarea id="textareaedit" name="textareaedit" cols="100"
                                 rows="15"></textarea></div>
                         <input id="submit" name="Submit" type="submit" onclick="vanish()"/>
 
@@ -189,13 +196,12 @@
                 </div>
             </div>
         </div>
-
         <script>
+
             function edit(id) {
                 var x = document.getElementById("edit");
                     x.style.display = "block";
                 var link = document.getElementById(id+"link");
-                console.log(link.value);
                 var title = document.getElementById(id+"title");
                 var email = document.getElementById(id+"email");
                 var other = document.getElementById(id+"other");
@@ -205,20 +211,24 @@
                 var titleedit = document.getElementById("titleedit").value = title.innerText;
                 var emailedit = document.getElementById("emailedit").value = email.innerText
                 var otheredit = document.getElementById("otheredit").value = other.innerText;
-                var descriptionedit = document.getElementById("textareaedit").innerText = description.innerText;
+                var descriptionedit = document.getElementById("textareaedit").innerHTML = description.innerHTML;
                 var action = "/editresource/"
                 var edit = document.getElementById("actionchange").action = action + id;
-                console.log(edit);
 
                 }
 
             function vanish() {
                 var x = document.getElementById("edit");
                 x.style.display = "none";
-
-                
             }
         </script>
+        <!-- <script>
+            jQuery(function(){
+                jQuery('form').submit( function(e) {
+                    jQuery('textarea').val( jQuery('#htmlsource').html() );
+                  });
+            });
+        </script> -->
 
 </body>
 {% endblock %}

@@ -33,7 +33,7 @@
       {% for Resource in ResourcesList %}
       <div class="flex-row">
         <div class="flex-name">
-          <a href="/resources/{{ loop.index }}" target="_blank">{{ Resource.title }}</a>
+          <a href="/resources/{{ Resource.id }}" target="_blank">{{ Resource.title }}</a>
         </div>
         <div class="flex-description">{{ Resource.description }}</div>
       </div>
