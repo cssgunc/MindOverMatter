@@ -113,11 +113,35 @@
     .left-title {
       font-size: 20pt;
     }
+
+    .flex-name {
+      text-align: center;
+    }
+
+    .flex-description {
+      display:none;
+    }
+
+    .flex-row {
+      justify-content: center;
+    }
   }
 
   @media only screen and (max-width: 400px) { 
     .left-title {
       font-size: 15pt;
+    }
+
+    .flex-name {
+      text-align: center;
+    }
+
+    .flex-description {
+      display:none;
+    }
+
+    .flex-row {
+      justify-content: center;
     }
 
   }
