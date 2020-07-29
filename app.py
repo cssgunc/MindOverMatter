@@ -24,8 +24,8 @@ def hello(name=None):
     return render_template('hello.html', name=name)
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!'
+def home():
+    return render_template('homepage.html')
 
 # class Post(db.Model):
 #     id = db.Column(db.Integer, primary_key=True)
