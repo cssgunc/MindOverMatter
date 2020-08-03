@@ -486,3 +486,9 @@ h1 {
     
   }
 }
+
+@media only screen and (min-width: 1600px) { 
+  .logoCenter {
+    justify-content: center;
+  }
+}
