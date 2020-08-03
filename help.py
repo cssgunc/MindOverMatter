@@ -19,12 +19,12 @@ chat_list = [
 call_list = [
     Resource("https://www.townofchapelhill.org/government/departments-services/police/contact-us", "Chapel Hill Police", "To report a previous or current crime, call 911"),
     Resource("tel:919-966-3658", "CAPS 24/7 Hotline", "Contact trained mental health professionals for any mental-health related crises"),
-    Resource("https://suicidepreventionlifeline.org/", "Suicide Hotline", "Provies free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week, across the U.S."),
-    Resource("https://www.nami.org/", "National Alliance on Mental Health Hotline", "Nationwide peer-support service providing information, resourse referrals, and support to people living with mental health conditions, their family members and caregivers, mental health providers and the public."),
-    Resource("https://freedomhouserecovery.org/", "Freedom House Recovery Center", "Chapel Hill Crisis Unit: 919-967-8844"),
-    Resource("https://www.alliancehealthplan.org/consumers-families/crisis-and-access/crisis-facilities/","Durham Recovery Response Center","24/7 Crisis Facility: 919-560-7305"),
-    Resource("https://www.compassctr.org/","Compass Center for Women and Families","24/7 Crisis Line 919-968-4610"),
-    Resource("https://ocrcc.org/","Orange County Rape Crisis Center","24/7 Hotline: 866-935-4783"),
+    Resource("tel:1-800-273-8255", "Suicide Hotline", "Provies free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week, across the U.S."),
+    Resource("tel:800-950-6264", "National Alliance on Mental Health Hotline", "Nationwide peer-support service providing information, resourse referrals, and support to people living with mental health conditions, their family members and caregivers, mental health providers and the public."),
+    Resource("tel:919-967-8844", "Freedom House Recovery Center", "Chapel Hill Crisis Unit: 919-967-8844"),
+    Resource("tel:919-560-7305","Durham Recovery Response Center","24/7 Crisis Facility: 919-560-7305"),
+    Resource("tel:919-968-4610","Compass Center for Women and Families","24/7 Crisis Line: 919-968-4610"),
+    Resource("tel:866-935-4783","Orange County Rape Crisis Center","24/7 Hotline: 866-935-4783"),
 
 
 ]

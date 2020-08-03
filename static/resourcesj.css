@@ -6,7 +6,6 @@
     font-family: Lato;
     color: black;
     text-align: left;
-    white-space: pre-line;
   }
 
   /* Resource list: body */
@@ -36,4 +35,22 @@
     margin: 1%;
   }
 
- 
+  @media only screen and (max-width: 600px) { 
+    .resource-title {
+      font-size: 120%;
+    }
+
+    .resource-description {
+      font-size: 90%;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .resource-title {
+      font-size: 120%;
+    } 
+
+    .resource-description {
+      font-size: 90%;
+    }
+  }

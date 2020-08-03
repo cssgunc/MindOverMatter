@@ -8,10 +8,14 @@
         {{ resource.title }}
     </div>
     <div class = "resource-description">
+        <a target="_blank" href="{{ resource.link }}">{{ resource.link }}</a>
+    </div>
+    <div class = "resource-description">
+        <a href="mailto: {{ resource.email }}">{{ resource.email }}</a>
+    </div>
+    <div class = "resource-description">
         {{ resource.description }}
     </div>
-    <!-- <div class = "resource-description">
-    </div> -->
     <div class = "resource-description">
         {{ resource.other }}
     </div>

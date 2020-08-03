@@ -22,6 +22,7 @@
     border-bottom: 5px solid #65a4d8;
     padding-bottom: 20px;
     padding-top: 20px;
+    word-wrap: break-word;
   }
 
   /* Resource titles styling */
@@ -115,7 +116,9 @@
     }
 
     .flex-name {
-      text-align: center;
+      font-size: 150%;
+      padding: 0px;
+      width: 80%;
     }
 
     .flex-description {
@@ -124,6 +127,18 @@
 
     .flex-row {
       justify-content: center;
+    }
+
+    .menu-container {
+      display: block;
+    }
+
+    .left-title {
+      margin-top: 10px;
+    }
+
+    .title {
+      padding-bottom: 10px;
     }
   }
 
@@ -133,7 +148,9 @@
     }
 
     .flex-name {
-      text-align: center;
+      font-size: 150%;
+      padding: 0px;
+      width: 80%;
     }
 
     .flex-description {
@@ -142,6 +159,18 @@
 
     .flex-row {
       justify-content: center;
+    }
+
+    .menu-container {
+      display: block;
+    }
+
+    .left-title {
+      margin-top: 10px;
+    }
+
+    .title {
+      padding-bottom: 10px;
     }
 
   }

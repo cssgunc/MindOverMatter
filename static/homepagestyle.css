@@ -254,6 +254,10 @@ h3 {
   color: inherit;
 }
 
+#textdec{
+  text-decoration: none !important;
+  color: #64a3d9;
+}
 
 .nav, #navbar {
   display: flex;
@@ -418,8 +422,8 @@ h1 {
 
 
 .calendarDiv{
-  height: 800px;
-  width: 600px;
+  height: auto;
+  width: auto;
   
 }
 
@@ -446,8 +450,6 @@ h1 {
   .flexBoxP {
     font-size: 15px;
   }
-  
- 
   
   .flexBoxH2 {
     font-size: 50px;
@@ -476,5 +478,11 @@ h1 {
     margin-left: 4%;
     margin-right: 4%;
   
+  }
+
+  .calendarDiv{
+    height: auto;
+    width: auto;;
+    
   }
 }
